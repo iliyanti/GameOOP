@@ -14,10 +14,16 @@
         private int health;
         private int mana;
         private int armour;
-        private int experience;
         private Direction currentDirection;
         private int level;
+        private int experience;
 
+        public int Experience
+        {
+            get { return this.experience; }
+            set { this.experience = value; }
+        }
+        
         public int Level
         {
             get { return this.level; }
