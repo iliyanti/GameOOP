@@ -45,6 +45,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Characters\Common\BaseStats.cs" />
+    <Compile Include="Characters\Common\Coordinate.cs" />
+    <Compile Include="Characters\Items\ItemBase.cs" />
+    <Compile Include="Characters\Items\WeaponsOneHanded.cs" />
+    <Compile Include="Engine\SoundEngine.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -52,6 +57,12 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Game.cs" />
+    <Compile Include="Characters\Enemy\EnemyBase.cs" />
+    <Compile Include="Characters\Enemy\EnemyNinja.cs" />
+    <Compile Include="Characters\Enemy\EnemySamurai.cs" />
+    <Compile Include="Characters\Player\PlayerBase.cs" />
+    <Compile Include="Characters\Common\Skill.cs" />
+    <Compile Include="Characters\Player\PlayerHero.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -75,6 +86,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Graphics\" />
+    <Folder Include="Menus\" />
+    <Folder Include="Room\" />
+    <Folder Include="Sound\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
