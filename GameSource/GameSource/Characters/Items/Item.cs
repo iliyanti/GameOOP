@@ -26,17 +26,17 @@
         Belt = 12,
         NoSlot = 13
     }
-    public class ItemBase
+    public class Item
     {
         private string name;
         private ItemSlot slot;
         private ItemRarity rarity;
-        private int slots;
+        private int slotsInInventory;
 
-        public int Slots
+        public int SlotsInInventory
         {
-            get { return this.slots; }
-            set { this.slots = value; }
+            get { return this.slotsInInventory; }
+            set { this.slotsInInventory = value; }
         }
 
         public ItemRarity Rarity

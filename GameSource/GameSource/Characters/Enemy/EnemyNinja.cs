@@ -1,10 +1,9 @@
 ﻿namespace Game.Characters.Enemy
 {
-    public class EnemyNinja:EnemyBase
+    public class EnemyNinja : Enemy
     {
         public EnemyNinja()
         {
-            
         }
     }
 }

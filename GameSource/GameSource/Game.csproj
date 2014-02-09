@@ -47,8 +47,13 @@
   <ItemGroup>
     <Compile Include="Characters\Common\BaseStats.cs" />
     <Compile Include="Characters\Common\Coordinate.cs" />
-    <Compile Include="Characters\Items\ItemBase.cs" />
-    <Compile Include="Characters\Items\WeaponsOneHanded.cs" />
+    <Compile Include="Characters\Items\Item.cs" />
+    <Compile Include="Characters\Items\OneHanded.cs" />
+    <Compile Include="Characters\Items\Potion.cs" />
+    <Compile Include="Characters\Items\PotionHealth.cs" />
+    <Compile Include="Characters\Quests\Quest.cs" />
+    <Compile Include="Engine\ExceptionSample.cs" />
+    <Compile Include="Engine\LoggerEngine.cs" />
     <Compile Include="Engine\SoundEngine.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -57,7 +62,7 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Game.cs" />
-    <Compile Include="Characters\Enemy\EnemyBase.cs" />
+    <Compile Include="Characters\Enemy\Enemy.cs" />
     <Compile Include="Characters\Enemy\EnemyNinja.cs" />
     <Compile Include="Characters\Enemy\EnemySamurai.cs" />
     <Compile Include="Characters\Player\PlayerBase.cs" />

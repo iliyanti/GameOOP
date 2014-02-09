@@ -1,6 +1,6 @@
 ﻿namespace Game.Characters.Enemy
 {
-    public class EnemySamurai:EnemyBase
+    public class EnemySamurai:Enemy
     {
         
     }
