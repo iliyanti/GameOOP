@@ -30,8 +30,14 @@
     {
         private string name;
         private ItemSlot slot;
-
         private ItemRarity rarity;
+        private int slots;
+
+        public int Slots
+        {
+            get { return this.slots; }
+            set { this.slots = value; }
+        }
 
         public ItemRarity Rarity
         {
@@ -51,6 +57,5 @@
             get { return this.name; }
             set { this.name = value; }
         }
-
     }
 }

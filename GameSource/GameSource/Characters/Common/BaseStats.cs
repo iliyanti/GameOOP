@@ -17,7 +17,22 @@
         private Direction currentDirection;
         private int level;
         private int experience;
+        private Coordinate locationCurrent;
+        private Coordinate locationHome;
 
+        public Coordinate LocationHome
+        {
+            get { return locationHome; }
+            set { locationHome = value; }
+        }
+        
+
+        public Coordinate LocationCurrent
+        {
+            get { return this.locationCurrent; }
+            set { this.locationCurrent = value; }
+        }
+        
         public int Experience
         {
             get { return this.experience; }
