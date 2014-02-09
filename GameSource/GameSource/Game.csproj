@@ -92,11 +92,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Graphics\" />
-    <Folder Include="Menus\" />
-    <Folder Include="Room\" />
-    <Folder Include="Sound\" />
+    <Content Include="Graphics\TextFile1.txt" />
+    <Content Include="Menus\TextFile1.txt" />
+    <Content Include="Room\TextFile1.txt" />
+    <Content Include="Sound\TextFile1.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
