@@ -97,6 +97,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="Data\TextFile1.txt" />
     <Content Include="Engine\Graphics\TextFile1.txt" />
     <Content Include="Data\Graphics\TextFile1.txt" />
     <Content Include="Views\TextFile1.txt" />
