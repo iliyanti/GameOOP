@@ -47,6 +47,9 @@
   <ItemGroup>
     <Compile Include="Characters\Common\BaseStats.cs" />
     <Compile Include="Characters\Common\Coordinate.cs" />
+    <Compile Include="Characters\Enemy\Alien.cs" />
+    <Compile Include="Characters\Enemy\Boss.cs" />
+    <Compile Include="Characters\Enemy\Ninja.cs" />
     <Compile Include="Characters\Items\Item.cs" />
     <Compile Include="Characters\Items\OneHanded.cs" />
     <Compile Include="Characters\Items\Potion.cs" />
@@ -63,8 +66,8 @@
     </Compile>
     <Compile Include="Game.cs" />
     <Compile Include="Characters\Enemy\Enemy.cs" />
-    <Compile Include="Characters\Enemy\EnemyNinja.cs" />
-    <Compile Include="Characters\Enemy\EnemySamurai.cs" />
+    <Compile Include="Characters\Enemy\Humanoid.cs" />
+    <Compile Include="Characters\Enemy\Animal.cs" />
     <Compile Include="Characters\Player\PlayerBase.cs" />
     <Compile Include="Characters\Common\Skill.cs" />
     <Compile Include="Characters\Player\PlayerHero.cs" />
