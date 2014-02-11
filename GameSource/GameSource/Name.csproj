@@ -103,7 +103,7 @@
   <ItemGroup>
     <Content Include="Engine\Graphics\TextFile1.txt" />
     <Content Include="Data\Graphics\TextFile1.txt" />
-    <Content Include="Menus\TextFile1.txt" />
+    <Content Include="Views\TextFile1.txt" />
     <Content Include="Shared\TextFile1.txt" />
     <Content Include="Data\Sounds\TextFile1.txt" />
   </ItemGroup>
