@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using Name.Characters.Common;
+using Name.Engine.Scripts.Characters.Common;
 
-namespace Name.Environment
+namespace Name.Engine.Scripts.Environment
 {
     public class Room
     {

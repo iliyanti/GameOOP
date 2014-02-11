@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace Name.Characters.Quests
+﻿namespace Name.Engine.Scripts.Characters.Quests
 {
     public class Quest
     {

@@ -1,7 +1,7 @@
-﻿namespace Name.Engine
-{
-    using System;
+﻿using System;
 
+namespace Name.System
+{
     public class ExceptionSample : Exception
     {
         public ExceptionSample() :

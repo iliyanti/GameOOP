@@ -7,8 +7,8 @@
     <ProjectGuid>{FEF84904-474E-4E8D-81FE-2BA954C96559}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Game</RootNamespace>
-    <AssemblyName>Game</AssemblyName>
+    <RootNamespace>Name</RootNamespace>
+    <AssemblyName>Name</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
@@ -45,36 +45,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Engine\MultiPlayer.cs" />
     <Compile Include="Engine\Game.cs" />
-    <Compile Include="Engine\Game\Characters\Common\BaseStats.cs" />
-    <Compile Include="Engine\Game\Characters\Common\Element.cs" />
-    <Compile Include="Engine\Game\Characters\Common\IMovable.cs" />
-    <Compile Include="Engine\Game\Characters\Enemy\Alien.cs" />
-    <Compile Include="Engine\Game\Characters\Enemy\Boss.cs" />
-    <Compile Include="Engine\Game\Characters\Enemy\Ninja.cs" />
-    <Compile Include="Engine\Game\Characters\Items\Item.cs" />
-    <Compile Include="Engine\Game\Characters\Items\OneHanded.cs" />
-    <Compile Include="Engine\Game\Characters\Items\Potion.cs" />
-    <Compile Include="Engine\Game\Characters\Items\PotionHealth.cs" />
-    <Compile Include="Engine\Game\Characters\Player\Ivan.cs" />
-    <Compile Include="Engine\Game\Characters\Quests\Quest.cs" />
+    <Compile Include="Engine\Scripts\Characters\Common\BaseStats.cs" />
+    <Compile Include="Engine\Scripts\Characters\Common\Element.cs" />
+    <Compile Include="Engine\Scripts\Characters\Common\IMovable.cs" />
+    <Compile Include="Engine\Scripts\Characters\Enemy\Alien.cs" />
+    <Compile Include="Engine\Scripts\Characters\Enemy\Boss.cs" />
+    <Compile Include="Engine\Scripts\Characters\Enemy\Ninja.cs" />
+    <Compile Include="Engine\Scripts\Characters\Items\Item.cs" />
+    <Compile Include="Engine\Scripts\Characters\Items\OneHanded.cs" />
+    <Compile Include="Engine\Scripts\Characters\Items\Potion.cs" />
+    <Compile Include="Engine\Scripts\Characters\Items\PotionHealth.cs" />
+    <Compile Include="Engine\Scripts\Characters\Player\Ivan.cs" />
+    <Compile Include="Engine\Scripts\Characters\Quests\Quest.cs" />
+    <Compile Include="Engine\SinglePlayer.cs" />
     <Compile Include="System\ExceptionSample.cs" />
     <Compile Include="System\LoggerEngine.cs" />
     <Compile Include="Engine\Sound\SoundEngine.cs" />
-    <Compile Include="Engine\Game\Environment\Room.cs" />
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Engine\Scripts\Environment\Room.cs" />
     <Compile Include="Name.cs" />
-    <Compile Include="Engine\Game\Characters\Enemy\Enemy.cs" />
-    <Compile Include="Engine\Game\Characters\Enemy\Humanoid.cs" />
-    <Compile Include="Engine\Game\Characters\Enemy\Animal.cs" />
-    <Compile Include="Engine\Game\Characters\Player\Hero.cs" />
-    <Compile Include="Engine\Game\Characters\Common\Skill.cs" />
-    <Compile Include="Engine\Game\Characters\Player\Gosho.cs" />
+    <Compile Include="Engine\Scripts\Characters\Enemy\Enemy.cs" />
+    <Compile Include="Engine\Scripts\Characters\Enemy\Humanoid.cs" />
+    <Compile Include="Engine\Scripts\Characters\Enemy\Animal.cs" />
+    <Compile Include="Engine\Scripts\Characters\Player\Hero.cs" />
+    <Compile Include="Engine\Scripts\Characters\Common\Skill.cs" />
+    <Compile Include="Engine\Scripts\Characters\Player\Gosho.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

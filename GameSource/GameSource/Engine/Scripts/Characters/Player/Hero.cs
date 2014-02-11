@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
-using Name.Characters.Common;
-using Name.Characters.Items;
-using Name.Characters.Quests;
+using Name.Engine.Scripts.Characters.Common;
+using Name.Engine.Scripts.Characters.Items;
+using Name.Engine.Scripts.Characters.Quests;
 
-namespace Name.Characters.Player
+namespace Name.Engine.Scripts.Characters.Player
 {
     public class Hero: BaseStats
     {

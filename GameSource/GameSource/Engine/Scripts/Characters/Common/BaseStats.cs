@@ -1,4 +1,4 @@
-﻿namespace Name.Characters.Common
+﻿namespace Name.Engine.Scripts.Characters.Common
 {
     public enum Direction
     {

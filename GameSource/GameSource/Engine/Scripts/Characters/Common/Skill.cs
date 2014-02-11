@@ -1,7 +1,7 @@
-﻿namespace Name.Characters.Common
-{
-    using System;
+﻿using System;
 
+namespace Name.Engine.Scripts.Characters.Common
+{
     public enum SkillType
     {
         Base,

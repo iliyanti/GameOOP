@@ -1,5 +1,4 @@
-﻿
-namespace Name.Characters.Items
+﻿namespace Name.Engine.Scripts.Characters.Items
 {
     public enum PotionType
     {

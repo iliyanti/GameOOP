@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace Name.Engine
+﻿namespace Name.Engine
 {
-    class Game
+    public class Game
     {
     }
 }
