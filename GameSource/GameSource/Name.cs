@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using Name.Engine;
 
 namespace Name
 {
@@ -14,6 +15,8 @@ namespace Name
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
+            Game game = new Game();
+            
         }
     }
 }

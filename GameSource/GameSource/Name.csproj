@@ -45,11 +45,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Engine\MultiPlayer.cs" />
+    <Compile Include="Account\Player.cs" />
     <Compile Include="Engine\Game.cs" />
-    <Compile Include="Engine\Scripts\Characters\Shared\BaseStats.cs" />
+    <Compile Include="Engine\Graphics\GraphicalEngine.cs" />
+    <Compile Include="Engine\Scripts\Characters\Shared\Character.cs" />
     <Compile Include="Engine\Scripts\Characters\Shared\Coordinate.cs" />
-    <Compile Include="Engine\Scripts\Characters\Shared\Element.cs" />
+    <Compile Include="Engine\Scripts\Characters\Shared\IHero.cs" />
     <Compile Include="Engine\Scripts\Characters\Shared\INpcEnemy.cs" />
     <Compile Include="Engine\Scripts\Characters\Shared\IMovable.cs" />
     <Compile Include="Engine\Scripts\Characters\NonPlayer\Alien.cs" />
@@ -63,7 +64,6 @@
     <Compile Include="Engine\Scripts\Characters\Quests\Quest.cs" />
     <Compile Include="Engine\Scripts\Characters\Shared\INpcQuest.cs" />
     <Compile Include="Engine\Scripts\Characters\Shared\INpcVendor.cs" />
-    <Compile Include="Engine\SinglePlayer.cs" />
     <Compile Include="System\ExceptionSample.cs" />
     <Compile Include="System\LoggerEngine.cs" />
     <Compile Include="Engine\Sound\SoundEngine.cs" />

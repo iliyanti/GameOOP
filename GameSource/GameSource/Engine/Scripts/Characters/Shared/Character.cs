@@ -1,4 +1,6 @@
-﻿namespace Name.Engine.Scripts.Characters.Shared
+﻿using System.Drawing;
+
+namespace Name.Engine.Scripts.Characters.Shared
 {
     public enum Direction
     {
@@ -9,29 +11,40 @@
         Still = 5
     }
 
-    public class BaseStats
+    public class Character
     {
         private int health;
         private int mana;
         private int armour;
-        private Direction directionCurrent;
+        private Direction direction;
         private int level;
         private int experience;
-        private Element locationHome;
-        private Element locationCurrent;
 
-        public Element LocationCurrent
+        public int HomeRow { get; set; }
+
+        public int HomeColumn { get; set; }
+
+        public int LocationRow { get; set; }
+
+        public int LocationColumn { get; set; }
+
+        public int TotalHealth { get; set; }
+
+        public int TotalMana { get; set; }
+
+
+        private string sprite;
+
+        public string Sprite
         {
-            get { return locationCurrent; }
-            set { locationCurrent = value; }
+            get { return sprite; }
+            set { sprite = value; }
         }
         
 
-        public Element LocationHome
-        {
-            get { return this.locationHome; }
-            set { this.locationHome = value; }
-        }
+       
+
+       
         
         public int Experience
         {
@@ -46,10 +59,10 @@
         }
         
 
-        public Direction DirectionCurrent
+        public Direction CurrentDirection
         {
-            get { return this.directionCurrent; }
-            set { this.directionCurrent = value; }
+            get { return this.direction; }
+            set { this.direction = value; }
         }
 
         public int Armour

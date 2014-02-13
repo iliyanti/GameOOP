@@ -5,12 +5,13 @@ using Name.Engine.Scripts.Characters.Shared;
 
 namespace Name.Engine.Scripts.Characters.Player
 {
-    public class Hero: BaseStats, IMovable
+    public class Hero: Character, IMovable, IHero
     {
         private List<Item> inventory;
         private Item shouldersItem;
         private List<Quest> quests;
 
+        
         public List<Quest> Quests
         {
             get { return this.quests; }
@@ -34,6 +35,16 @@ namespace Name.Engine.Scripts.Characters.Player
         public void Move()
         {
             throw new global::System.NotImplementedException();
+        }
+
+        public int NextLevelExperience { get; set; }
+
+        public void CheckHealth()
+        {
+            if (this.Health >= 0)
+            {
+              
+            }
         }
     }
 }
