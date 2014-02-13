@@ -47,9 +47,9 @@
   <ItemGroup>
     <Compile Include="Engine\MultiPlayer.cs" />
     <Compile Include="Engine\Game.cs" />
-    <Compile Include="Engine\Scripts\Characters\Common\BaseStats.cs" />
-    <Compile Include="Engine\Scripts\Characters\Common\Element.cs" />
-    <Compile Include="Engine\Scripts\Characters\Common\IMovable.cs" />
+    <Compile Include="Engine\Scripts\Characters\Shared\BaseStats.cs" />
+    <Compile Include="Engine\Scripts\Characters\Shared\Element.cs" />
+    <Compile Include="Engine\Scripts\Characters\Shared\IMovable.cs" />
     <Compile Include="Engine\Scripts\Characters\Enemy\Alien.cs" />
     <Compile Include="Engine\Scripts\Characters\Enemy\Boss.cs" />
     <Compile Include="Engine\Scripts\Characters\Enemy\Ninja.cs" />
@@ -69,7 +69,7 @@
     <Compile Include="Engine\Scripts\Characters\Enemy\Humanoid.cs" />
     <Compile Include="Engine\Scripts\Characters\Enemy\Animal.cs" />
     <Compile Include="Engine\Scripts\Characters\Player\Hero.cs" />
-    <Compile Include="Engine\Scripts\Characters\Common\Skill.cs" />
+    <Compile Include="Engine\Scripts\Characters\Shared\Skill.cs" />
     <Compile Include="Engine\Scripts\Characters\Player\Gosho.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">

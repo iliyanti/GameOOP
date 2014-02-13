@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Name.Engine.Scripts.Characters.Common
+namespace Name.Engine.Scripts.Characters.Shared
 {
     public enum SkillType
     {

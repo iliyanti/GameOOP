@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using Name.Engine.Scripts.Characters.Common;
 using Name.Engine.Scripts.Characters.Items;
 using Name.Engine.Scripts.Characters.Quests;
+using Name.Engine.Scripts.Characters.Shared;
 
 namespace Name.Engine.Scripts.Characters.Player
 {

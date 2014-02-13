@@ -1,4 +1,4 @@
-﻿namespace Name.Engine.Scripts.Characters.Common
+﻿namespace Name.Engine.Scripts.Characters.Shared
 {
     public struct Element
     {
