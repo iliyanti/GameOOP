@@ -4,6 +4,6 @@ namespace Name.Engine.Scripts.Characters.Shared
 {
     interface IMovable
     {
-        void Move(Hero[] heroes);
+        void Move();
     }
 }

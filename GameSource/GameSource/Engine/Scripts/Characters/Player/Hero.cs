@@ -5,7 +5,7 @@ using Name.Engine.Scripts.Characters.Shared;
 
 namespace Name.Engine.Scripts.Characters.Player
 {
-    public class Hero: BaseStats
+    public class Hero: BaseStats, IMovable
     {
         private List<Item> inventory;
         private Item shouldersItem;
@@ -30,6 +30,10 @@ namespace Name.Engine.Scripts.Characters.Player
             set { this.inventory = value; }
         }
 
-        
+
+        public void Move()
+        {
+            throw new global::System.NotImplementedException();
+        }
     }
 }
