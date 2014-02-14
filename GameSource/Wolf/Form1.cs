@@ -111,7 +111,7 @@ namespace Wolf
         {
             // Load the level map.
             int levelIndex = 0;
-            string levelPath = string.Format(@"Level{0}.txt", levelIndex);
+            string levelPath = string.Format(@"...\...\Level{0}.txt", levelIndex);
 
             // Load the map and ensure all of the lines are the same length.
             int width;
