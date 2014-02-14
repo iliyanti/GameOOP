@@ -5,7 +5,7 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Name", "GameSource\Name.csproj", "{FEF84904-474E-4E8D-81FE-2BA954C96559}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WolfDemo", "..\..\Games\GraphicsGDI+\Wolf\WolfDemo.csproj", "{4484B2FA-CE4A-4456-AFEE-CA6FF7B922E2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WolfDemo", "Wolf\WolfDemo.csproj", "{4484B2FA-CE4A-4456-AFEE-CA6FF7B922E2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
