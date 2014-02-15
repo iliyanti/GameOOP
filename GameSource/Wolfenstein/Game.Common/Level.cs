@@ -4,9 +4,9 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
-using GameLoop.Properties;
+using Game.Properties;
 
-namespace GameLoop
+namespace Game
 {
     class Level
     {

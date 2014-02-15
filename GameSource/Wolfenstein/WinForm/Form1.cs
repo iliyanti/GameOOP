@@ -2,7 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace GameLoop
+namespace Game
 {
     public partial class Form1 : GameForm
     {

@@ -1,7 +1,7 @@
-﻿namespace GameLoop
+﻿namespace Game
 {
     using System.Drawing;
-    using GameLoop.Properties;
+    using Game.Properties;
 
     public enum Direction { Left, Right, Up, Down, Center }
 

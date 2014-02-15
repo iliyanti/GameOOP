@@ -1,4 +1,4 @@
-﻿namespace GameLoop
+﻿namespace Game
 {
     partial class Form1
     {
@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "RPG";
+            this.Text = "Wolfenstein";
         }
 
         #endregion

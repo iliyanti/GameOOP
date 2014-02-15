@@ -1,4 +1,4 @@
-﻿namespace GameLoop
+﻿namespace Game
 {
     using System;
     using System.Windows.Forms;
