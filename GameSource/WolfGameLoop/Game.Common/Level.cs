@@ -32,39 +32,40 @@ namespace GameLoop
         private Bitmap bmpTileEmpty;
         private Bitmap bmpTileBlack;
         private Bitmap bmpTileWall;
-        private Bitmap bmpPlayer;
         private Bitmap bmpWall;
 
-        // Player vars
-        private const int PLAYER_SPEED = 1;
-        private enum Direction { Left, Right, Up, Down, Center }
-        private Direction playerDirection;
-        private int playerX;
-        private int playerY;
+        // The player
+        private Player player;
 
         public Level()
         {
+            // The offset of the map from the top-left corner of the window
             MapXoffset = 20;
             MapYoffset = 20;
+
+            // The height of the bottom area where text messages are shown
             TextscreenHeight = 40;
 
             MapRectangle = new Rectangle(0, 0, MAP_WIDTH * TILE_SIZE, MAP_HEIGHT * TILE_SIZE);
             ClientSize = new Size(MapRectangle.Width + 2 * MapXoffset, MapRectangle.Height + MapYoffset + TextscreenHeight);
 
+            // The Graphics device used to draw everything on the map (tiles, player, enemies etc.)
             mapBuffer = new Bitmap(MapRectangle.Width, MapRectangle.Height);
             mapGraphics = Graphics.FromImage(mapBuffer);
 
-            bmpPlayer = Resources.Tiles28x46Player;
-            playerX = TILE_SIZE; // Put on empty tile!
-            playerY = TILE_SIZE; // Put on empty tile!
-
             LoadMapFromFile();
             DrawMapToMemory();
+
+            Collisions.map = map;
+            Collisions.tileSize = TILE_SIZE;
+            Collisions.mapRectangle = this.MapRectangle;
+
+            player = new Player(TILE_SIZE, TILE_SIZE); // Put on empty tile!
         }
 
         public void Update(GameTime gameTime)
         {
-            MovePlayer(gameTime);
+            player.Move(gameTime);
         }
 
         public void Draw(GameTime gameTime, Graphics screenGraphics)
@@ -73,7 +74,7 @@ namespace GameLoop
             mapGraphics.DrawImage(bmpWall, 0, 0, bmpWall.Width, bmpWall.Height);
 
             // Draw the player to the map buffer
-            mapGraphics.DrawImage(bmpPlayer, playerX, playerY, bmpPlayer.Width, bmpPlayer.Height);
+            player.Draw(gameTime, mapGraphics);
 
             // Clear the screen background (because it is larger than the map)
             screenGraphics.Clear(Color.Black);
@@ -121,6 +122,8 @@ namespace GameLoop
             // Verify that the level has a beginning and an end.
         }
 
+        // Called only once to draw and store the map image in memory.
+        // Then, each time the scene is redrawn, the stored image is used.
         private void DrawMapToMemory()
         {
             bmpTileEmpty = Resources.Tile16x16Empty;
@@ -171,35 +174,7 @@ namespace GameLoop
             string line2 = string.Format("fps: {0,5:F1}", fps);
             g.DrawString(line2, textFont, textBrush, CenterTextX(line2), MapYoffset + this.MapRectangle.Bottom + 20);            
         }
-
-        private bool ValidateXY(int x, int y)
-        {
-            return x >= 0 && x <= MapRectangle.Width - bmpPlayer.Width && y >= 0 && y <= MapRectangle.Height - bmpPlayer.Height;
-        }
-
-        private bool CheckWallCollision(Bitmap bmpPlayer)
-        {
-            // Get the player's bounding rectangle and find neighboring tiles.
-            Rectangle bounds = new Rectangle(playerX, playerY, bmpPlayer.Width, bmpPlayer.Height);
-            int leftTile = bounds.Left / TILE_SIZE;
-            int rightTile = (int)Math.Ceiling(((float)bounds.Right / TILE_SIZE));
-            int topTile = bounds.Top / TILE_SIZE;
-            int bottomTile = (int)Math.Ceiling(((float)bounds.Bottom / TILE_SIZE));
-
-            for (int row = topTile; row < bottomTile; row++)
-            {
-                for (int col = leftTile; col < rightTile; col++)
-                {
-                    if (map[row, col] == 'W')
-                    {
-                        return false;
-                    }
-                }
-            }
-
-            return true;
-        }
-
+        
         /// <summary>
         /// Returns the X coord of the text so that it is centered on the screen
         /// </summary>
@@ -216,65 +191,25 @@ namespace GameLoop
         {
             if (key == Keys.Left)
             {
-                playerDirection = Direction.Left;
+                player.playerDirection = Direction.Left;
             }
             else if (key == Keys.Right)
             {
-                playerDirection = Direction.Right;
+                player.playerDirection = Direction.Right;
             }
             else if (key == Keys.Up)
             {
-                playerDirection = Direction.Up;
+                player.playerDirection = Direction.Up;
             }
             else if (key == Keys.Down)
             {
-                playerDirection = Direction.Down;
+                player.playerDirection = Direction.Down;
             }
         }
 
-        internal void OnKeyUp()
+        public void OnKeyUp()
         {
-            playerDirection = Direction.Center;
-        }
-
-        public void MovePlayer(GameTime gameTime)
-        {
-            if (playerDirection == Direction.Center)
-            {
-                return;
-            }
-
-            int temp_x = playerX;
-            int temp_y = playerY;
-
-            double step = PLAYER_SPEED * gameTime.ElapsedTime.TotalMilliseconds;
-
-            if (playerDirection == Direction.Left)
-            {
-                playerX -= PLAYER_SPEED;
-            }
-            else if (playerDirection == Direction.Right)
-            {
-                playerX += PLAYER_SPEED;
-            }
-            else if (playerDirection == Direction.Up)
-            {
-                playerY -= PLAYER_SPEED;
-            }
-            else if (playerDirection == Direction.Down)
-            {
-                playerY += PLAYER_SPEED;
-            }
-
-            if (ValidateXY(playerX, playerY) && CheckWallCollision(bmpPlayer))
-            {
-                // Player was moved
-                return;
-            }
-
-            // Player cannot go here, return the old coords
-            playerX = temp_x;
-            playerY = temp_y;
+            player.playerDirection = Direction.Center;
         }
     }
 }
