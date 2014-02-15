@@ -1,42 +1,25 @@
 ﻿namespace GameLoop
 {
     using System;
-    using System.Diagnostics;
 
-    public class GameTime
+    public struct GameTime
     {
-        private Stopwatch stopwatch;
-        private TimeSpan previousElapsedTime;
-
-        public GameTime()
+        public GameTime(TimeSpan elapsedTime, TimeSpan totalTime)
+            : this()
         {
-            stopwatch = Stopwatch.StartNew();
-            previousElapsedTime = TimeSpan.Zero;
+            this.ElapsedTime = elapsedTime;
+            this.TotalTime = totalTime;
         }
 
         /// <summary>
         /// The amount of elapsed game time since the last update.
         /// </summary>
-        public TimeSpan ElapsedTime
-        {
-            get
-            {
-                TimeSpan time = stopwatch.Elapsed;
-                TimeSpan elapsedTime = time - previousElapsedTime;
-                previousElapsedTime = time;
-                return elapsedTime;
-            }
-        }
+        public TimeSpan ElapsedTime { get; private set; }
+
 
         /// <summary>
         /// The amount of game time since the start of the game.
         /// </summary>
-        public TimeSpan TotalTime
-        {
-            get
-            {
-                return stopwatch.Elapsed;
-            }
-        }
+        public TimeSpan TotalTime  { get; private set; }
     }
 }

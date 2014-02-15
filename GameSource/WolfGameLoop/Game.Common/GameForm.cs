@@ -37,10 +37,10 @@
             level.Update(gameTime);
             level.Draw(gameTime, screenGraphics);
 
-            System.Console.WriteLine("fps: {0:F1}", 1000 / gameTime.ElapsedTime.TotalMilliseconds);
-
             // Redraw the Form window
             Invalidate();
+
+            System.Console.WriteLine("fps: {0,5:F1}", 1000 / gameTime.ElapsedTime.TotalMilliseconds);
         }
 
         private void GameForm_Paint(object sender, PaintEventArgs e)

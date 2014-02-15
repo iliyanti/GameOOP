@@ -167,7 +167,7 @@ namespace GameLoop
 
             // Draw the text messages (third line) to the screenbuffer
             //string line2 = string.Format("Player tile: ({0}, {1})", playerX / TILE_SIZE, playerY / TILE_SIZE);
-            string line2 = string.Format("fps: {0:F1}", 1000 / gameTime.ElapsedTime.TotalMilliseconds);
+            string line2 = string.Format("fps: {0,5:F1}", 1000 / gameTime.ElapsedTime.TotalMilliseconds);
             
             g.DrawString(line2, textFont, textBrush, CenterTextX(line2), MapYoffset + this.MapRectangle.Bottom + 20);
         }
