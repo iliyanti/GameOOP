@@ -8,7 +8,6 @@ namespace Wolf
     {
         private readonly Bitmap screenBuffer;
         private readonly Graphics screenGraphics;
-
         private Level level;
 
         public GameForm()
@@ -29,7 +28,7 @@ namespace Wolf
         private void GameForm_Paint(object sender, PaintEventArgs e)
         {
             level.Draw(screenGraphics);
-
+            
             // Render the screenbuffer to the screen
             e.Graphics.DrawImage(screenBuffer, 0, 0, screenBuffer.Width, screenBuffer.Height);
         }
@@ -46,7 +45,7 @@ namespace Wolf
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            // Redraw
+            // Redraw the form (raises OnPaint event) 
             Invalidate();
         }
     }
