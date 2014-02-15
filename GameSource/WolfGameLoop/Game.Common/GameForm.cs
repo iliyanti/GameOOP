@@ -9,6 +9,7 @@
         private readonly Bitmap screenBuffer;
         private readonly Graphics screenGraphics;
         private readonly FastLoop fastLoop;
+        private float fps = 0;
 
         private Level level;
 
@@ -20,7 +21,7 @@
             // Create level
             this.level = new Level();
 
-            // Set client size
+            // Set the form client size to the level size
             this.ClientSize = level.ClientSize;
 
             // Set the graphics device
@@ -40,7 +41,10 @@
             // Redraw the Form window
             Invalidate();
 
-            System.Console.WriteLine("fps: {0,5:F1}", 1000 / gameTime.ElapsedTime.TotalMilliseconds);
+#if DEBUG
+            fps = (1000 / (float)gameTime.ElapsedTime.TotalMilliseconds) * 0.1f + fps * 0.9f;
+            System.Console.WriteLine("fps: {0,5:F1}", fps);
+#endif
         }
 
         private void GameForm_Paint(object sender, PaintEventArgs e)

@@ -2,10 +2,9 @@
 {
     using System;
 
-    public struct GameTime
+    public class GameTime
     {
         public GameTime(TimeSpan elapsedTime, TimeSpan totalTime)
-            : this()
         {
             this.ElapsedTime = elapsedTime;
             this.TotalTime = totalTime;

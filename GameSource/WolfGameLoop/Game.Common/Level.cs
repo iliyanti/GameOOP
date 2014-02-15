@@ -15,6 +15,7 @@ namespace GameLoop
         private Graphics mapGraphics;
         private readonly Font textFont = new Font("Consolas", 12, FontStyle.Bold);
         private readonly SolidBrush textBrush = new SolidBrush(Color.FromArgb(255, 255, 85));
+        private double fps = 0;
      
         // Map
         private const int TILE_SIZE = 16;
@@ -166,10 +167,9 @@ namespace GameLoop
             g.DrawString(line1, textFont, textBrush, CenterTextX(line1), MapYoffset + this.MapRectangle.Bottom);
 
             // Draw the text messages (third line) to the screenbuffer
-            //string line2 = string.Format("Player tile: ({0}, {1})", playerX / TILE_SIZE, playerY / TILE_SIZE);
-            string line2 = string.Format("fps: {0,5:F1}", 1000 / gameTime.ElapsedTime.TotalMilliseconds);
-            
-            g.DrawString(line2, textFont, textBrush, CenterTextX(line2), MapYoffset + this.MapRectangle.Bottom + 20);
+            fps = (1000 / gameTime.ElapsedTime.TotalMilliseconds) * 0.10 + fps * 0.90;
+            string line2 = string.Format("fps: {0,5:F1}", fps);
+            g.DrawString(line2, textFont, textBrush, CenterTextX(line2), MapYoffset + this.MapRectangle.Bottom + 20);            
         }
 
         private bool ValidateXY(int x, int y)
