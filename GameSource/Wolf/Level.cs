@@ -8,55 +8,50 @@ using Wolf.Properties;
 
 namespace Wolf
 {
-    public partial class Form1 : Form
+    class Level
     {
-        private const int PLAYER_STEP = 4;
+        // Level graphics
+        private Bitmap mapBuffer;
+        private Graphics mapGraphics;
+        private readonly Font textFont = new Font("Consolas", 12, FontStyle.Bold);
+        private readonly SolidBrush textBrush = new SolidBrush(Color.FromArgb(255, 255, 85));
+     
+        // Map
         private const int TILE_SIZE = 16;
         private const int MAP_WIDTH = 33;
         private const int MAP_HEIGHT = 19;
-        private const int MAP_X_OFFSET = 20;
-        private const int MAP_Y_OFFSET = 20;
-        private const int TEXT_SCR_HEIGHT = 40;
-
-
-        private readonly Font textFont = new Font("Consolas", 12, FontStyle.Bold);
-        private readonly SolidBrush textBrush = new SolidBrush(Color.FromArgb(255,255,85));
-
         private char[,] map;
-        private Rectangle mapRectangle;
+        public Rectangle MapRectangle { get; private set; }
+        public Size ClientSize { get; private set; }
+        public int MapXoffset { get; private set; }
+        public int MapYoffset { get; private set; }
+        public int TextscreenHeight { get; private set; }
 
-        // The images.
+        // Resources
         private Bitmap bmpTileEmpty;
         private Bitmap bmpTileBlack;
         private Bitmap bmpTileWall;
         private Bitmap bmpPlayer;
         private Bitmap bmpWall;
 
-        private readonly Bitmap screenBuffer;
-        private readonly Graphics screenGraphics;
-
-        private readonly Bitmap mapBuffer;
-        private readonly Graphics mapGraphics;
-
+        // Player vars
+        private const int PLAYER_STEP = 4;
         private enum Direction { Left, Right, Up, Down }
         private Direction playerDirection;
         private int playerX;
         private int playerY;
 
-        public Form1()
+        public Level()
         {
-            InitializeComponent();
-            this.mapRectangle = new Rectangle(0, 0, MAP_WIDTH * TILE_SIZE, MAP_HEIGHT * TILE_SIZE);
-            this.ClientSize = new System.Drawing.Size(mapRectangle.Width + 2 * MAP_X_OFFSET, mapRectangle.Height + MAP_Y_OFFSET + TEXT_SCR_HEIGHT);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
+            MapXoffset = 20;
+            MapYoffset = 20;
+            TextscreenHeight = 40;
 
-            mapBuffer = new Bitmap(mapRectangle.Width, mapRectangle.Height);
+            MapRectangle = new Rectangle(0, 0, MAP_WIDTH * TILE_SIZE, MAP_HEIGHT * TILE_SIZE);
+            ClientSize = new Size(MapRectangle.Width + 2 * MapXoffset, MapRectangle.Height + MapYoffset + TextscreenHeight);
+
+            mapBuffer = new Bitmap(MapRectangle.Width, MapRectangle.Height);
             mapGraphics = Graphics.FromImage(mapBuffer);
-
-            screenBuffer = new Bitmap(ClientSize.Width, ClientSize.Height);
-            screenGraphics = Graphics.FromImage(screenBuffer);
 
             bmpPlayer = Resources.Tiles28x46Player;
             playerX = TILE_SIZE; // Put on empty tile!
@@ -64,47 +59,6 @@ namespace Wolf
 
             LoadMapFromFile();
             DrawMapToMemory();
-        }
-
-        private void Form1_Paint(object sender, PaintEventArgs e)
-        {
-            // Draw the walls to the map buffer
-            mapGraphics.DrawImage(bmpWall, 0, 0, bmpWall.Width, bmpWall.Height);
-
-            // Draw the player to the map buffer
-            mapGraphics.DrawImage(bmpPlayer, playerX, playerY, bmpPlayer.Width, bmpPlayer.Height);
-
-            // Clear the screen background (because it is larger than the map)
-            screenGraphics.Clear(Color.Black);
-
-            // Draw the map to the screenbuffer
-            screenGraphics.DrawImage(mapBuffer, MAP_X_OFFSET, MAP_Y_OFFSET, mapBuffer.Width, mapBuffer.Height);
-
-            // Draw the text messages to the screenbuffer
-            DrawMessages(screenGraphics);
-
-            // Render the screenbuffer to the screen
-            e.Graphics.DrawImage(screenBuffer, 0, 0, screenBuffer.Width, screenBuffer.Height);
-        }
-
-        private void DrawMessages(Graphics g)
-        {
-            // Draw the text messages (first line) to the screenbuffer
-            string line0 = string.Format("LEVEL 1");
-            g.DrawString(line0, textFont, textBrush, CenterTextX(line0), 0);
-
-            // Draw the text messages (second line) to the screenbuffer
-            string line1 = string.Format("Use the arrow keys to move around...");
-            g.DrawString(line1, textFont, textBrush, CenterTextX(line1), MAP_Y_OFFSET + this.mapRectangle.Bottom);
-
-            // Draw the text messages (third line) to the screenbuffer
-            string line2 = string.Format("Player tile: ({0}, {1})", playerX / TILE_SIZE, playerY / TILE_SIZE);
-            g.DrawString(line2, textFont, textBrush, CenterTextX(line2), MAP_Y_OFFSET + this.mapRectangle.Bottom + 20);
-        }
-
-        protected override void OnPaintBackground(PaintEventArgs pevent)
-        {
-            //Don't allow the background to paint when using e.Graphics.DrawImage
         }
 
         private void LoadMapFromFile()
@@ -178,46 +132,24 @@ namespace Wolf
             }
         }
 
-        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        private void DrawMessages(Graphics g)
         {
-            int temp_x = playerX;
-            int temp_y = playerY;
+            // Draw the text messages (first line) to the screenbuffer
+            string line0 = string.Format("LEVEL 1");
+            g.DrawString(line0, textFont, textBrush, CenterTextX(line0), 0);
 
-            if (e.KeyCode == Keys.Left)
-            {
-                playerDirection = Direction.Left;
-                playerX -= PLAYER_STEP;
-            }
-            else if (e.KeyCode == Keys.Right)
-            {
-                playerDirection = Direction.Right;
-                playerX += PLAYER_STEP;
-            }
-            else if (e.KeyCode == Keys.Up)
-            {
-                playerDirection = Direction.Up;
-                playerY -= PLAYER_STEP;
-            }
-            else if (e.KeyCode == Keys.Down)
-            {
-                playerDirection = Direction.Down;
-                playerY += PLAYER_STEP;
-            }
+            // Draw the text messages (second line) to the screenbuffer
+            string line1 = string.Format("Use the arrow keys to move around...");
+            g.DrawString(line1, textFont, textBrush, CenterTextX(line1), MapYoffset + this.MapRectangle.Bottom);
 
-            if (Validate(playerX, playerY) && CheckWallCollision(bmpPlayer))
-            {
-                // Player was moved
-                return;
-            }
-
-            // Player cannot go here, return the old coords
-            playerX = temp_x;
-            playerY = temp_y;
+            // Draw the text messages (third line) to the screenbuffer
+            string line2 = string.Format("Player tile: ({0}, {1})", playerX / TILE_SIZE, playerY / TILE_SIZE);
+            g.DrawString(line2, textFont, textBrush, CenterTextX(line2), MapYoffset + this.MapRectangle.Bottom + 20);
         }
 
-        private bool Validate(int x, int y)
+        private bool ValidateXY(int x, int y)
         {
-            return x >= 0 && x <= mapRectangle.Width - bmpPlayer.Width && y >= 0 && y <= mapRectangle.Height - bmpPlayer.Height;
+            return x >= 0 && x <= MapRectangle.Width - bmpPlayer.Width && y >= 0 && y <= MapRectangle.Height - bmpPlayer.Height;
         }
 
         private bool CheckWallCollision(Bitmap bmpPlayer)
@@ -243,12 +175,6 @@ namespace Wolf
             return true;
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            // Redraw
-            Invalidate();
-        }
-
         /// <summary>
         /// Returns the X coord of the text so that it is centered on the screen
         /// </summary>
@@ -259,6 +185,61 @@ namespace Wolf
                 return 0;
             }
             return (this.ClientSize.Width - text.Length * 9) / 2;
+        }
+
+        public void OnKeyDown(Keys key)
+        {
+            int temp_x = playerX;
+            int temp_y = playerY;
+
+            if (key == Keys.Left)
+            {
+                playerDirection = Direction.Left;
+                playerX -= PLAYER_STEP;
+            }
+            else if (key == Keys.Right)
+            {
+                playerDirection = Direction.Right;
+                playerX += PLAYER_STEP;
+            }
+            else if (key == Keys.Up)
+            {
+                playerDirection = Direction.Up;
+                playerY -= PLAYER_STEP;
+            }
+            else if (key == Keys.Down)
+            {
+                playerDirection = Direction.Down;
+                playerY += PLAYER_STEP;
+            }
+
+            if (ValidateXY(playerX, playerY) && CheckWallCollision(bmpPlayer))
+            {
+                // Player was moved
+                return;
+            }
+
+            // Player cannot go here, return the old coords
+            playerX = temp_x;
+            playerY = temp_y;
+        }
+
+        public void Draw(Graphics screenGraphics)
+        {
+            // Draw the walls to the map buffer
+            mapGraphics.DrawImage(bmpWall, 0, 0, bmpWall.Width, bmpWall.Height);
+
+            // Draw the player to the map buffer
+            mapGraphics.DrawImage(bmpPlayer, playerX, playerY, bmpPlayer.Width, bmpPlayer.Height);
+
+            // Clear the screen background (because it is larger than the map)
+            screenGraphics.Clear(Color.Black);
+
+            // Draw the map to the screenbuffer
+            screenGraphics.DrawImage(mapBuffer, MapXoffset, MapYoffset, mapBuffer.Width, mapBuffer.Height);
+
+            // Draw the text messages to the screenbuffer
+            DrawMessages(screenGraphics);
         }
     }
 }
