@@ -8,11 +8,13 @@
     {
         private readonly Bitmap screenBuffer;
         private readonly Graphics screenGraphics;
+        private readonly FastLoop fastLoop;
+
         private Level level;
-        private FastLoop fastLoop;
 
         public GameForm()
         {
+            // Prepare the form
             InitializeForm();
 
             // Create level
@@ -21,38 +23,28 @@
             // Set client size
             this.ClientSize = level.ClientSize;
 
+            // Set the graphics device
             screenBuffer = new Bitmap(ClientSize.Width, ClientSize.Height);
             screenGraphics = Graphics.FromImage(screenBuffer);
 
+            // Runs the game loop whenever the application is idle
             fastLoop = new FastLoop(GameLoop);
         }
 
         void GameLoop(GameTime gameTime)
         {
-            // GameCode goes here
-            // GetInput
-            // Process
-            // Render
-            System.Console.WriteLine(gameTime.ElapsedTime.TotalMilliseconds);
-            Sleep(40);
+            // This is the main game loop
+            level.Update(gameTime);
+            level.Draw(gameTime, screenGraphics);
+
+            System.Console.WriteLine("fps: {0:F1}", 1000 / gameTime.ElapsedTime.TotalMilliseconds);
 
             // Redraw the Form window
             Invalidate();
         }
 
-        void Sleep(long someTime)
-        {
-            System.Diagnostics.Stopwatch sw = System.Diagnostics.Stopwatch.StartNew();
-            while (sw.ElapsedMilliseconds < someTime)
-            {
-                // This cycle will take someTime to complete
-            }
-        }
-
         private void GameForm_Paint(object sender, PaintEventArgs e)
         {
-            level.Draw(screenGraphics);
-
             // Render the screenbuffer to the screen
             e.Graphics.DrawImage(screenBuffer, 0, 0, screenBuffer.Width, screenBuffer.Height);
         }
@@ -67,10 +59,9 @@
             level.OnKeyDown(e.KeyCode);
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void GameForm_KeyUp(object sender, KeyEventArgs e)
         {
-            // Redraw the form (raises OnPaint event) 
-            Invalidate();
+            level.OnKeyUp();
         }
 
         private void InitializeForm()
@@ -81,6 +72,7 @@
             this.BackColor = System.Drawing.Color.Black;
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.GameForm_Paint);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.GameForm_KeyDown);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.GameForm_KeyUp);
         }
     }
 }

@@ -44,19 +44,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Game.Common\Class1.cs" />
     <Compile Include="Game.Common\FastLoop.cs" />
     <Compile Include="Game.Common\GameForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Game.Common\GameTime.cs" />
     <Compile Include="Game.Common\Level.cs" />
-    <Compile Include="WinForm\Form1.cs" />
+    <Compile Include="WinForm\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="WinForm\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="WinForm\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Game.Common\GameForm.resx">
+      <DependentUpon>GameForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

@@ -35,8 +35,8 @@ namespace GameLoop
         private Bitmap bmpWall;
 
         // Player vars
-        private const int PLAYER_STEP = 4;
-        private enum Direction { Left, Right, Up, Down }
+        private const int PLAYER_SPEED = 1;
+        private enum Direction { Left, Right, Up, Down, Center }
         private Direction playerDirection;
         private int playerX;
         private int playerY;
@@ -59,6 +59,29 @@ namespace GameLoop
 
             LoadMapFromFile();
             DrawMapToMemory();
+        }
+
+        public void Update(GameTime gameTime)
+        {
+            MovePlayer(gameTime);
+        }
+
+        public void Draw(GameTime gameTime, Graphics screenGraphics)
+        {
+            // Draw the walls to the map buffer
+            mapGraphics.DrawImage(bmpWall, 0, 0, bmpWall.Width, bmpWall.Height);
+
+            // Draw the player to the map buffer
+            mapGraphics.DrawImage(bmpPlayer, playerX, playerY, bmpPlayer.Width, bmpPlayer.Height);
+
+            // Clear the screen background (because it is larger than the map)
+            screenGraphics.Clear(Color.Black);
+
+            // Draw the map to the screenbuffer
+            screenGraphics.DrawImage(mapBuffer, MapXoffset, MapYoffset, mapBuffer.Width, mapBuffer.Height);
+
+            // Draw the text messages to the screenbuffer
+            DrawMessages(gameTime, screenGraphics);
         }
 
         private void LoadMapFromFile()
@@ -132,7 +155,7 @@ namespace GameLoop
             }
         }
 
-        private void DrawMessages(Graphics g)
+        private void DrawMessages(GameTime gameTime, Graphics g)
         {
             // Draw the text messages (first line) to the screenbuffer
             string line0 = string.Format("LEVEL 1");
@@ -143,7 +166,9 @@ namespace GameLoop
             g.DrawString(line1, textFont, textBrush, CenterTextX(line1), MapYoffset + this.MapRectangle.Bottom);
 
             // Draw the text messages (third line) to the screenbuffer
-            string line2 = string.Format("Player tile: ({0}, {1})", playerX / TILE_SIZE, playerY / TILE_SIZE);
+            //string line2 = string.Format("Player tile: ({0}, {1})", playerX / TILE_SIZE, playerY / TILE_SIZE);
+            string line2 = string.Format("fps: {0:F1}", 1000 / gameTime.ElapsedTime.TotalMilliseconds);
+            
             g.DrawString(line2, textFont, textBrush, CenterTextX(line2), MapYoffset + this.MapRectangle.Bottom + 20);
         }
 
@@ -189,28 +214,56 @@ namespace GameLoop
 
         public void OnKeyDown(Keys key)
         {
-            int temp_x = playerX;
-            int temp_y = playerY;
-
             if (key == Keys.Left)
             {
                 playerDirection = Direction.Left;
-                playerX -= PLAYER_STEP;
             }
             else if (key == Keys.Right)
             {
                 playerDirection = Direction.Right;
-                playerX += PLAYER_STEP;
             }
             else if (key == Keys.Up)
             {
                 playerDirection = Direction.Up;
-                playerY -= PLAYER_STEP;
             }
             else if (key == Keys.Down)
             {
                 playerDirection = Direction.Down;
-                playerY += PLAYER_STEP;
+            }
+        }
+
+        internal void OnKeyUp()
+        {
+            playerDirection = Direction.Center;
+        }
+
+        public void MovePlayer(GameTime gameTime)
+        {
+            if (playerDirection == Direction.Center)
+            {
+                return;
+            }
+
+            int temp_x = playerX;
+            int temp_y = playerY;
+
+            double step = PLAYER_SPEED * gameTime.ElapsedTime.TotalMilliseconds;
+
+            if (playerDirection == Direction.Left)
+            {
+                playerX -= PLAYER_SPEED;
+            }
+            else if (playerDirection == Direction.Right)
+            {
+                playerX += PLAYER_SPEED;
+            }
+            else if (playerDirection == Direction.Up)
+            {
+                playerY -= PLAYER_SPEED;
+            }
+            else if (playerDirection == Direction.Down)
+            {
+                playerY += PLAYER_SPEED;
             }
 
             if (ValidateXY(playerX, playerY) && CheckWallCollision(bmpPlayer))
@@ -222,24 +275,6 @@ namespace GameLoop
             // Player cannot go here, return the old coords
             playerX = temp_x;
             playerY = temp_y;
-        }
-
-        public void Draw(Graphics screenGraphics)
-        {
-            // Draw the walls to the map buffer
-            mapGraphics.DrawImage(bmpWall, 0, 0, bmpWall.Width, bmpWall.Height);
-
-            // Draw the player to the map buffer
-            mapGraphics.DrawImage(bmpPlayer, playerX, playerY, bmpPlayer.Width, bmpPlayer.Height);
-
-            // Clear the screen background (because it is larger than the map)
-            screenGraphics.Clear(Color.Black);
-
-            // Draw the map to the screenbuffer
-            screenGraphics.DrawImage(mapBuffer, MapXoffset, MapYoffset, mapBuffer.Width, mapBuffer.Height);
-
-            // Draw the text messages to the screenbuffer
-            DrawMessages(screenGraphics);
         }
     }
 }
