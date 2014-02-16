@@ -14,9 +14,6 @@ namespace RPGGame
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-           
-
-
 
             Game game = new Game();
             game.LoadExisitngPlayers();

@@ -113,6 +113,7 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="ClassDiagram.cd" />
+    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -128,6 +129,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Data\Graphics\TextFile1.txt" />
+    <None Include="Data\Graphics\Tiles28x46Player.png" />
+    <None Include="Data\Graphics\Tile16x16Black.png" />
+    <None Include="Data\Graphics\Tile16x16Empty.png" />
+    <None Include="Data\Graphics\Tile16x16Wall.png" />
     <Content Include="Data\Sounds\TextFile1.txt" />
     <Content Include="Data\TextFile1.txt" />
     <Content Include="Engine\Graphics\TextFile1.txt" />

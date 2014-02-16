@@ -52,7 +52,5 @@ namespace RPGGame.Engine.Scripts.Characters.NonPlayable
                 }
             }
         }
-
-
     }
 }
