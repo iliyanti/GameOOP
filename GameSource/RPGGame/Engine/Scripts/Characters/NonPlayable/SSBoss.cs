@@ -1,6 +1,6 @@
 ﻿namespace RPG.Engine.Scripts.Characters.NonPlayable
 {
-    public class Ninja : Humanoid
+    public class SSBoss : SS
     {
     }
 }

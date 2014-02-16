@@ -13,6 +13,5 @@
             this.Row = row;
             this.DistanceFromOrigin = distance;
         }
-
     }
 }

@@ -1,4 +1,5 @@
-﻿using RPG.Engine.Scripts.Characters.Shared;
+﻿using System;
+using RPG.Engine.Scripts.Characters.Shared;
 
 namespace RPG.Engine.Graphics
 {
@@ -6,12 +7,17 @@ namespace RPG.Engine.Graphics
     {
         public static void Draw(Character item)
         {
-           
+
         }
 
         public static void DrawEmpty(Character item)
         {
-            
+
+        }
+
+        public static void ClearScreen()
+        {
+            Console.Clear();
         }
     }
 }

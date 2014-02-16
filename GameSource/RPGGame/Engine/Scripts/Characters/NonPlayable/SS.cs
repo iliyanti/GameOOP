@@ -1,7 +1,6 @@
 ﻿namespace RPG.Engine.Scripts.Characters.NonPlayable
 {
-    public class Humanoid : Enemy
+    public class SS : Enemy
     {
-        
     }
 }

@@ -1,22 +1,29 @@
 ﻿namespace RPG.Engine.Scripts.Characters.Shared
 {
-    public enum Direction
-    {
-        Up = 0,
-        Left = 1,
-        Down = 2,
-        Right = 3,
-        Still = 5
-    }
+   
 
     public class Character
     {
         private int health;
-        private int mana;
-        private int armour;
+        private int baseArmour;
         private Direction direction;
         private int level;
-        private int experience;
+        private string sprite;
+        private int baseDamage;
+        private int totalHealth;
+
+        public int TotalHealth
+        {
+            get { return this.totalHealth; }
+            set { this.totalHealth = value; }
+        }
+        
+
+        public int BaseDamage
+        {
+            get { return baseDamage; }
+            set { baseDamage = value; }
+        }
 
         public int HomeRow { get; set; }
 
@@ -26,36 +33,19 @@
 
         public int LocationColumn { get; set; }
 
-        public int TotalHealth { get; set; }
-
-        public int TotalMana { get; set; }
-
-
-        private string sprite;
 
         public string Sprite
         {
             get { return sprite; }
             set { sprite = value; }
         }
-        
 
-       
-
-       
-        
-        public int Experience
-        {
-            get { return this.experience; }
-            set { this.experience = value; }
-        }
-        
         public int Level
         {
             get { return this.level; }
             set { this.level = value; }
         }
-        
+
 
         public Direction CurrentDirection
         {
@@ -63,16 +53,10 @@
             set { this.direction = value; }
         }
 
-        public int Armour
+        public int BaseArmour
         {
-            get { return this.armour; }
-            set { this.armour = value; }
-        }
-
-        public int Mana
-        {
-            get { return this.mana; }
-            set { this.mana = value; }
+            get { return this.baseArmour; }
+            set { this.baseArmour = value; }
         }
 
         public int Health
