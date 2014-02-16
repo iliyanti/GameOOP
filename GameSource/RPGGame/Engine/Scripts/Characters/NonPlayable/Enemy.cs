@@ -54,4 +54,3 @@ namespace RPG.Engine.Scripts.Characters.NonPlayable
         }
     }
 }
-SS

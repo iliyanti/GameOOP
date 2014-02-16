@@ -5,7 +5,7 @@ using RPG.Engine.Scripts.Characters.Shared;
 
 namespace RPG.Engine.Scripts.Characters.Playable
 {
-    public class Hero: Character, IMovable, IHero
+    public class Hero: Character, IMovable, IHero, IPlayable
     {
         private List<Item> inventory;
         private Item shouldersItem;
@@ -45,6 +45,11 @@ namespace RPG.Engine.Scripts.Characters.Playable
             {
               
             }
+        }
+
+        public void GetUsetInput()
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

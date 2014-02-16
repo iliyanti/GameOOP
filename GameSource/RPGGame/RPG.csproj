@@ -68,6 +68,7 @@
     <Compile Include="Engine\Scripts\Characters\Shared\INpcEnemy.cs" />
     <Compile Include="Engine\Scripts\Characters\Shared\INpcQuest.cs" />
     <Compile Include="Engine\Scripts\Characters\Shared\INpcVendor.cs" />
+    <Compile Include="Engine\Scripts\Characters\Shared\IPlayable.cs" />
     <Compile Include="Engine\Scripts\Characters\Shared\Skill.cs" />
     <Compile Include="Engine\Scripts\Environment\Room.cs" />
     <Compile Include="Engine\Sound\SoundEngine.cs" />
