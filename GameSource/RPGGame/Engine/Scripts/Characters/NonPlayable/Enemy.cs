@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using RPGGame.Engine.Scripts.Characters.Playable;
-using RPGGame.Engine.Scripts.Characters.Shared;
+using RPG.Engine.Scripts.Characters.Playable;
+using RPG.Engine.Scripts.Characters.Shared;
 
-namespace RPGGame.Engine.Scripts.Characters.NonPlayable
+namespace RPG.Engine.Scripts.Characters.NonPlayable
 {
     public class Enemy : Character, IMovable, INpcEnemy
     {
@@ -54,3 +54,4 @@ namespace RPGGame.Engine.Scripts.Characters.NonPlayable
         }
     }
 }
+SS

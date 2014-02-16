@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Windows.Forms;
-using RPGGame.Account;
-using RPGGame.Engine.Scripts.Characters.NonPlayable;
-using RPGGame.Engine.Scripts.Characters.Playable;
-using RPGGame.Engine.Scripts.Environment;
+using RPG.Account;
+using RPG.Engine.Scripts.Characters.NonPlayable;
+using RPG.Engine.Scripts.Characters.Playable;
+using RPG.Engine.Scripts.Environment;
 
 namespace RPGGame.Engine
 {

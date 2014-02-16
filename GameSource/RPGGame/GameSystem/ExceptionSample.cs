@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace RPGGame.GameSystem
+namespace RPG.GameSystem
 {
     public class ExceptionSample : Exception
     {

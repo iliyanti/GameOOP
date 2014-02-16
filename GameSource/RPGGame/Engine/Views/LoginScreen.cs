@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
-using RPGGame.Account;
+using RPG.Account;
 
 namespace RPGGame
 {

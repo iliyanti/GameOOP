@@ -1,6 +1,6 @@
-﻿using RPGGame.Engine.Scripts.Characters.Shared;
+﻿using RPG.Engine.Scripts.Characters.Shared;
 
-namespace RPGGame.Engine.Graphics
+namespace RPG.Engine.Graphics
 {
     public static class GraphicalEngine
     {

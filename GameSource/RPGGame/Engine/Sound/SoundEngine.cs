@@ -1,4 +1,4 @@
-﻿namespace RPGGame.Engine.Sound
+﻿namespace RPG.Engine.Sound
 {
     static class SoundEngine
     {

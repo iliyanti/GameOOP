@@ -1,4 +1,4 @@
-﻿namespace RPGGame.Engine.Scripts.Characters.Quests
+﻿namespace RPG.Engine.Scripts.Characters.Quests
 {
     public class Quest
     {

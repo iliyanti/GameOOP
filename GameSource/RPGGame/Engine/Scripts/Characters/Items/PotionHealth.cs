@@ -1,4 +1,4 @@
-﻿namespace RPGGame.Engine.Scripts.Characters.Items
+﻿namespace RPG.Engine.Scripts.Characters.Items
 {
     public class PotionHealth:Potion
     {

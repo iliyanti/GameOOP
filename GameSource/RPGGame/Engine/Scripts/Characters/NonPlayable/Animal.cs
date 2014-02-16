@@ -1,6 +1,6 @@
-﻿namespace RPGGame.Engine.Scripts.Characters.NonPlayable
+﻿namespace RPG.Engine.Scripts.Characters.NonPlayable
 {
-    public class Animal : global::RPGGame.Engine.Scripts.Characters.NonPlayable.Enemy
+    public class Animal : Enemy
     {
 
     }

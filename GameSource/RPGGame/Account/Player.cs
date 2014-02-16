@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using RPGGame.Engine.Scripts.Characters.Playable;
+using RPG.Engine.Scripts.Characters.Playable;
 
-namespace RPGGame.Account
+namespace RPG.Account
 {
     public class Player
     {

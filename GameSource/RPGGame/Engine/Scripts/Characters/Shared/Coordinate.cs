@@ -1,4 +1,4 @@
-﻿namespace RPGGame.Engine.Scripts.Characters.Shared
+﻿namespace RPG.Engine.Scripts.Characters.Shared
 {
     public struct Coordinate
     {

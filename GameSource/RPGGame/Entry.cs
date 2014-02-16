@@ -2,7 +2,7 @@
 using System.Windows.Forms;
 using RPGGame.Engine;
 
-namespace RPGGame
+namespace RPG
 {
     static class Program
     {

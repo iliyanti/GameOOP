@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
-using RPGGame.Engine.Scripts.Characters.Items;
-using RPGGame.Engine.Scripts.Characters.Quests;
-using RPGGame.Engine.Scripts.Characters.Shared;
+using RPG.Engine.Scripts.Characters.Items;
+using RPG.Engine.Scripts.Characters.Quests;
+using RPG.Engine.Scripts.Characters.Shared;
 
-namespace RPGGame.Engine.Scripts.Characters.Playable
+namespace RPG.Engine.Scripts.Characters.Playable
 {
     public class Hero: Character, IMovable, IHero
     {

@@ -1,4 +1,4 @@
-﻿namespace RPGGame.Engine.Scripts.Characters.Playable
+﻿namespace RPG.Engine.Scripts.Characters.Playable
 {
     public class Ivan : Hero
     {

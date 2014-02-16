@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using RPGGame.Engine.Scripts.Characters.Playable;
+using RPG.Engine.Scripts.Characters.Playable;
 
-namespace RPGGame.Engine.Scripts.Characters.Shared
+namespace RPG.Engine.Scripts.Characters.Shared
 {
     interface INpcEnemy
     {

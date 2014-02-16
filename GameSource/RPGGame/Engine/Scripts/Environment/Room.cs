@@ -1,4 +1,4 @@
-﻿namespace RPGGame.Engine.Scripts.Environment
+﻿namespace RPG.Engine.Scripts.Environment
 {
     public class Room
     {
