@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Windows.Forms;
+using RPG.Engine.Graphics;
 using RPGGame.Engine;
 
 namespace RPG
@@ -12,13 +12,16 @@ namespace RPG
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-
+            //Application.EnableVisualStyles();
+            //Application.SetCompatibleTextRenderingDefault(false);
+            GraphicalEngine.PrepareScreen();
             Game game = new Game();
-            game.LoadExisitngPlayers();
-            game.AskForNumberOfPlayers();
-            game.ShowLoginScreen();
+
+            game.GenerateRooms();
+            game.Play();
+          
+
+
         }
     }
 }

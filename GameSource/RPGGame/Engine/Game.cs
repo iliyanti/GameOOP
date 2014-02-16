@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Windows.Forms;
 using RPG.Account;
+using RPG.Engine.Graphics;
 using RPG.Engine.Scripts.Characters.NonPlayable;
 using RPG.Engine.Scripts.Characters.Playable;
 using RPG.Engine.Scripts.Environment;
@@ -43,9 +44,16 @@ namespace RPGGame.Engine
 
         public void ShowLoginScreen()
         {
-           Application.Run(new LoginScreen());
+            Application.Run(new LoginScreen());
 
         }
+
+        public void GenerateRooms()
+        {
+            Room room = RoomFactory.Create();
+            this.Rooms.Add(room);
+        }
+
 
         public void AskForNumberOfPlayers()
         {
@@ -66,6 +74,8 @@ namespace RPGGame.Engine
 
         public void Play()
         {
+            GraphicalEngine.DrawRoom(this.Rooms[0]);
+            GraphicalEngine.Draw(this.Heroes);
             while (true)
             {
 

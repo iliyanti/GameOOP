@@ -11,7 +11,6 @@ namespace RPG.Account
 
         public Hero CurrentHero { get; set; }
 
-
         public Player(string name)
         {
             this.Name = name;

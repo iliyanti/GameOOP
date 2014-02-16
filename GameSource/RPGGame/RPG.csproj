@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{5095D0E2-2C60-4F0B-A43E-579A04EB0123}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>RPG</RootNamespace>
     <AssemblyName>RPGGame</AssemblyName>
@@ -31,6 +31,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -52,7 +55,6 @@
     <Compile Include="Engine\Scripts\Characters\Items\Potion.cs" />
     <Compile Include="Engine\Scripts\Characters\Items\PotionHealth.cs" />
     <Compile Include="Engine\Scripts\Characters\NonPlayable\AnimalDog.cs" />
-    <Compile Include="Engine\Scripts\Characters\NonPlayable\GuardDog.cs" />
     <Compile Include="Engine\Scripts\Characters\NonPlayable\NaziOfficer.cs" />
     <Compile Include="Engine\Scripts\Characters\NonPlayable\SS.cs" />
     <Compile Include="Engine\Scripts\Characters\NonPlayable\Animal.cs" />
@@ -76,6 +78,7 @@
     <Compile Include="Engine\Scripts\Characters\Shared\IPlayable.cs" />
     <Compile Include="Engine\Scripts\Characters\Shared\Skill.cs" />
     <Compile Include="Engine\Scripts\Environment\Room.cs" />
+    <Compile Include="Engine\Scripts\Environment\RoomFactory.cs" />
     <Compile Include="Engine\Sound\SoundEngine.cs" />
     <Compile Include="Engine\Views\GameWindow.cs">
       <SubType>Form</SubType>
@@ -139,7 +142,9 @@
     <None Include="Data\Graphics\Tile16x16Wall.png" />
     <Content Include="Data\Sounds\TextFile1.txt" />
     <Content Include="Data\TextFile1.txt" />
-    <Content Include="Engine\Graphics\TextFile1.txt" />
+    <Content Include="Engine\Graphics\Room1.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Engine\Views\TextFile1.txt" />
     <Content Include="Shared\TextFile1.txt" />
   </ItemGroup>
