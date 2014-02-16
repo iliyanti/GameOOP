@@ -2,12 +2,14 @@
 {
     using System.Drawing;
     using Game.Properties;
+    using System;
 
     public enum Direction { Left, Right, Up, Down, Center }
 
     public class Player
     {
-        private const int PLAYER_SPEED = 1;
+        // Player speed in pixels per millisecond
+        private const float PlayerSpeed = 0.1f;
         public Bitmap bmpPlayer;
 
         public int playerX;
@@ -31,23 +33,23 @@
             int temp_x = playerX;
             int temp_y = playerY;
 
-            double step = PLAYER_SPEED * gameTime.ElapsedTime.TotalMilliseconds;
+            int move = (int)Math.Round(PlayerSpeed * gameTime.ElapsedTime.TotalMilliseconds);
 
             if (playerDirection == Direction.Left)
             {
-                playerX -= PLAYER_SPEED;
+                playerX -= move;
             }
             else if (playerDirection == Direction.Right)
             {
-                playerX += PLAYER_SPEED;
+                playerX += move;
             }
             else if (playerDirection == Direction.Up)
             {
-                playerY -= PLAYER_SPEED;
+                playerY -= move;
             }
             else if (playerDirection == Direction.Down)
             {
-                playerY += PLAYER_SPEED;
+                playerY += move;
             }
 
             Rectangle bounds = new Rectangle(playerX, playerY, bmpPlayer.Width, bmpPlayer.Height);

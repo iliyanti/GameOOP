@@ -2,6 +2,7 @@
 {
     using System;
     using System.Drawing;
+    using System.Threading;
     using System.Windows.Forms;
 
     public class GameForm : Form
@@ -12,6 +13,8 @@
         private float fps = 0;
 
         private Level level;
+
+        public static bool DEBUG_MODE { get; private set; }
 
         public GameForm()
         {
@@ -30,6 +33,8 @@
 
             // Runs the game loop whenever the application is idle
             fastLoop = new FastLoop(GameLoop);
+
+            DEBUG_MODE = true;
         }
 
         void GameLoop(GameTime gameTime)
@@ -41,10 +46,11 @@
             // Redraw the Form window
             Invalidate();
 
-#if DEBUG
-            fps = (1000 / (float)gameTime.ElapsedTime.TotalMilliseconds) * 0.1f + fps * 0.9f;
-            System.Console.WriteLine("fps: {0,5:F1}", fps);
-#endif
+            if (GameForm.DEBUG_MODE)
+            {
+                fps = (1000 / (float)gameTime.ElapsedTime.TotalMilliseconds) * 0.1f + fps * 0.9f;
+                System.Console.WriteLine("fps: {0,5:F1}", fps);
+            }
         }
 
         private void GameForm_Paint(object sender, PaintEventArgs e)
