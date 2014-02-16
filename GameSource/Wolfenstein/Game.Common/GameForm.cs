@@ -53,7 +53,7 @@
             }
         }
 
-        private void GameForm_Paint(object sender, PaintEventArgs e)
+        private void OnPaint(object sender, PaintEventArgs e)
         {
             // Render the screenbuffer to the screen
             e.Graphics.DrawImage(screenBuffer, 0, 0, screenBuffer.Width, screenBuffer.Height);
@@ -64,12 +64,12 @@
             //Don't allow the background to paint when using e.Graphics.DrawImage
         }
 
-        private void GameForm_KeyDown(object sender, KeyEventArgs e)
+        private void OnKeyDown(object sender, KeyEventArgs e)
         {
             level.OnKeyDown(e.KeyCode);
         }
 
-        private void GameForm_KeyUp(object sender, KeyEventArgs e)
+        private void OnKeyUp(object sender, KeyEventArgs e)
         {
             level.OnKeyUp();
         }
@@ -80,9 +80,9 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.BackColor = System.Drawing.Color.Black;
-            this.Paint += new System.Windows.Forms.PaintEventHandler(this.GameForm_Paint);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.GameForm_KeyDown);
-            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.GameForm_KeyUp);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.OnPaint);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.OnKeyDown);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.OnKeyUp);
         }
     }
 }
