@@ -12,15 +12,15 @@
         private const float PlayerSpeed = 0.1f;
         public Bitmap bmpPlayer;
 
-        public int playerX;
-        public int playerY;
+        public PointF position;
+        private Point mapPosition;
         public Direction playerDirection;
 
         public Player(int x, int y)
         {
             bmpPlayer = Resources.Tiles28x46Player;
-            playerX = x;
-            playerY = y;
+            position = new PointF(x, y);
+            mapPosition = new Point((int)Math.Round(position.X), (int)Math.Round(position.Y));
         }
 
         public void Move(GameTime gameTime)
@@ -30,29 +30,31 @@
                 return;
             }
 
-            int temp_x = playerX;
-            int temp_y = playerY;
+            PointF temp_position = position;
+            Point temp_mapPos = mapPosition;
 
-            int move = (int)Math.Round(PlayerSpeed * gameTime.ElapsedTime.TotalMilliseconds);
+            float move = (float)(PlayerSpeed * gameTime.ElapsedTime.TotalMilliseconds);
 
             if (playerDirection == Direction.Left)
             {
-                playerX -= move;
+                position.X -= move;
             }
             else if (playerDirection == Direction.Right)
             {
-                playerX += move;
+                position.X += move;
             }
             else if (playerDirection == Direction.Up)
             {
-                playerY -= move;
+                position.Y -= move;
             }
             else if (playerDirection == Direction.Down)
             {
-                playerY += move;
+                position.Y += move;
             }
 
-            Rectangle bounds = new Rectangle(playerX, playerY, bmpPlayer.Width, bmpPlayer.Height);
+            mapPosition = new Point((int)Math.Round(position.X), (int)Math.Round(position.Y));
+
+            Rectangle bounds = new Rectangle(mapPosition.X, mapPosition.Y, bmpPlayer.Width, bmpPlayer.Height);
 
             if (Collisions.ValidateXY(bounds) && Collisions.CheckWallCollision(bounds))
             {
@@ -61,14 +63,14 @@
             }
 
             // Player cannot go here, return the old coords
-            playerX = temp_x;
-            playerY = temp_y;
+            position = temp_position;
+            mapPosition = temp_mapPos;
         }
 
         public void Draw(GameTime gameTime, Graphics mapGraphics)
         {
             // Draw the player to the map buffer
-            mapGraphics.DrawImage(bmpPlayer, playerX, playerY, bmpPlayer.Width, bmpPlayer.Height);
+            mapGraphics.DrawImage(bmpPlayer, mapPosition.X, mapPosition.Y, bmpPlayer.Width, bmpPlayer.Height);
         }
     }
 }
