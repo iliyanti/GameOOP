@@ -9,7 +9,7 @@ namespace RPG.Engine.Scripts.Characters.Playable
     /// <summary>
     /// A class for the hero
     /// </summary>
-    public abstract class Hero : Character, IHero, IPlayable
+    public abstract class Hero : Character, IHero
     {
         private Item chestArmor;
 

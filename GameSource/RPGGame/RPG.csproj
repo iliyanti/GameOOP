@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject />
+    <StartupObject>RPG.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -76,7 +76,6 @@
     <Compile Include="Engine\Scripts\Interfaces\IHero.cs" />
     <Compile Include="Engine\Scripts\Interfaces\IMovable.cs" />
     <Compile Include="Engine\Scripts\Interfaces\INpcEnemy.cs" />
-    <Compile Include="Engine\Scripts\Interfaces\IPlayable.cs" />
     <Compile Include="Engine\Scripts\Characters\Shared\RandomGenerator.cs" />
     <Compile Include="Engine\Scripts\Characters\Shared\Skill.cs" />
     <Compile Include="Engine\Scripts\Environment\Room.cs" />
@@ -106,6 +105,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="GameSystem\CustomExceptions\InvalidNumberOfPlayers.cs" />
     <Compile Include="GameSystem\ExceptionLogging\LoggerEngine.cs" />
+    <Compile Include="Tests\TestItem.cs" />
+    <Compile Include="Tests\TestPathFinding.cs" />
     <EmbeddedResource Include="Engine\Views\GameWindow.resx">
       <DependentUpon>GameWindow.cs</DependentUpon>
     </EmbeddedResource>

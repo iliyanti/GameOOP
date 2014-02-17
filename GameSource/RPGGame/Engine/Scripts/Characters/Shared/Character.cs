@@ -21,7 +21,6 @@
             this.CurrentDirection = Direction.Still;
             this.LocationColumn = homeColumn;
             this.LocationRow = homeRow;
-            this.Inventory = new List<Item>();
             this.Path = new Stack<Direction>();
         }
 
@@ -29,11 +28,6 @@
         /// Gets and sets the total health of the character
         /// </summary>
         public int TotalHealth { get; set; }
-
-        /// <summary>
-        /// Gets and sets the inventory of the character
-        /// </summary>
-        protected List<Item> Inventory { get; set; }
 
         /// <summary>
         /// Symbol for the character

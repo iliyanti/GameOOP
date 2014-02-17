@@ -10,7 +10,7 @@
   <Class Name="RPG.Engine.Game" Collapsed="true">
     <Position X="14.75" Y="5.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AoBAAAoAAAAAkAACAAAAAEACAAAgAAAAgYAAAAAAAAg=</HashCode>
+      <HashCode>AoBAAAoAAAAAkAACAgAAAEACAAAgAAAAgYAAAAAAAAg=</HashCode>
       <FileName>Engine\Game.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -45,7 +45,7 @@
   <Class Name="RPG.Engine.Scripts.Characters.Items.Item" Collapsed="true">
     <Position X="2.75" Y="6.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAEABAAAAQAAAAEQBAAAAACAAAAAgA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAEABAAAAQAABAEQBAQAAACAAAAAgA=</HashCode>
       <FileName>Engine\Scripts\Characters\Items\Item.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -80,7 +80,7 @@
   <Class Name="RPG.Engine.Scripts.Characters.NonPlayable.Enemy" Collapsed="true">
     <Position X="5.25" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAIACAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAIACAAAAAAAAIAAAAAAAAABAAAAAAAAAAAA=</HashCode>
       <FileName>Engine\Scripts\Characters\NonPlayable\Enemy.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -130,7 +130,7 @@
   <Class Name="RPG.Engine.Scripts.Characters.Playable.Gosho" Collapsed="true">
     <Position X="12" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
       <FileName>Engine\Scripts\Characters\Playable\Gosho.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -145,7 +145,7 @@
   <Class Name="RPG.Engine.Scripts.Characters.Playable.Ivan" Collapsed="true">
     <Position X="14.25" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAACAA=</HashCode>
       <FileName>Engine\Scripts\Characters\Playable\Ivan.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -159,7 +159,7 @@
   <Class Name="RPG.Engine.Scripts.Characters.Shared.Character" Collapsed="true">
     <Position X="7.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAACAAAAIACAAICAAAAAAAECAAAAgKRACAAAgAYAAA=</HashCode>
+      <HashCode>AAAACAAAAIACAAICAAAAAAAECAAAAgKRACAAAAAYAAA=</HashCode>
       <FileName>Engine\Scripts\Characters\Shared\Character.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -251,7 +251,7 @@
   <Class Name="RPG.Properties.Resources" Collapsed="true">
     <Position X="23.75" Y="3.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAQAAAAAIA=</HashCode>
     </TypeIdentifier>
   </Class>
   <Class Name="RPG.Properties.Settings" Collapsed="true">
@@ -284,7 +284,7 @@
   <Interface Name="RPG.Engine.Scripts.Interfaces.IHero" Collapsed="true">
     <Position X="13.25" Y="8.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA=</HashCode>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA=</HashCode>
       <FileName>Engine\Scripts\Interfaces\IHero.cs</FileName>
     </TypeIdentifier>
   </Interface>
@@ -300,13 +300,6 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Engine\Scripts\Interfaces\INpcEnemy.cs</FileName>
-    </TypeIdentifier>
-  </Interface>
-  <Interface Name="RPG.Engine.Scripts.Interfaces.IPlayable" Collapsed="true">
-    <Position X="15" Y="9.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Engine\Scripts\Interfaces\IPlayable.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Enum Name="RPG.Engine.Scripts.Characters.Shared.Direction" Collapsed="true">
