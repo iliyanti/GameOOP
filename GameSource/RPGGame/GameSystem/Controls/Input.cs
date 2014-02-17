@@ -1,10 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using RPG.Engine.Scripts.Characters.Playable;
-using RPG.Engine.Scripts.Characters.Shared;
-
-namespace RPG.GameSystem.Controls
+﻿namespace RPG.GameSystem.Controls
 {
+    using Engine.Scripts.Characters.Playable;
+    using Engine.Scripts.Characters.Shared;
+    using System;
+    using System.Collections.Generic;
+
+    /// <summary>
+    /// A class to handle the input from the keyboard
+    /// </summary>
     public static class Input
     {
         private const ConsoleKey PlayerOneUp = ConsoleKey.UpArrow;
@@ -16,6 +19,10 @@ namespace RPG.GameSystem.Controls
         private const ConsoleKey PlayerTwoLeft = ConsoleKey.A;
         private const ConsoleKey PlayerTwoRight = ConsoleKey.D;
 
+        /// <summary>
+        /// A method to assign an action based on a key input
+        /// </summary>
+        /// <param name="heroes"></param>
         public static void GetInput(List<Hero> heroes)
         {
             if (Console.KeyAvailable) //do this only if key is pressed

@@ -1,7 +1,7 @@
-﻿using RPG.Engine.Scripts.Characters.Shared;
-
-namespace RPG.Engine.Scripts.Characters.Items
+﻿namespace RPG.Engine.Scripts.Characters.Items
 {
+    using Shared;
+
     /// <summary>
     /// A class to create items
     /// </summary>
@@ -15,7 +15,7 @@ namespace RPG.Engine.Scripts.Characters.Items
         /// Method to create an item
         /// </summary>
         /// <returns></returns>
-        public static Item CreateItem()
+        public static Item Create()
         {
             double chance = RandomGenerator.GivePercent();
 

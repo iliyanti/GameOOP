@@ -2,6 +2,7 @@
 using RPG.Engine.Scripts.Characters.Items;
 using RPG.Engine.Scripts.Characters.Quests;
 using RPG.Engine.Scripts.Characters.Shared;
+using RPG.Engine.Scripts.Interfaces;
 
 namespace RPG.Engine.Scripts.Characters.Playable
 {
@@ -16,13 +17,7 @@ namespace RPG.Engine.Scripts.Characters.Playable
             : base(homeRow, homeColumn)
         {
             this.Quests = new List<Quest>();
-            this.Inventory = new List<Item>();
         }
-
-        /// <summary>
-        /// Gets and sets the inventory
-        /// </summary>
-        private List<Item> Inventory { get; set; }
 
         public int Experience { get; set; }
         public int NextLevelExperience { get; set; }
@@ -88,7 +83,5 @@ namespace RPG.Engine.Scripts.Characters.Playable
         {
             this.Inventory.Add(item);
         }
-
-        
     }
 }

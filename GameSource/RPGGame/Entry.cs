@@ -23,20 +23,18 @@ namespace RPG
             Game game = new Game();
 
             game.GenerateRooms();
-          //  game.Play();
-          
-            Item item = ItemFactory.CreateItem();
+            game.Play();
 
-            Console.WriteLine(item);
-            Character hero = new Ivan(6,6);
-
-            Character fd = new AnimalDog(6,6);
-
-            List<Character> data = new List<Character>();
-
-            data.Add(fd);
-
-            data[0].
+            //Item item = ItemFactory.Create();
+            //
+            //Console.WriteLine(item);
+            //Character hero = new Ivan(6, 6);
+            //
+            //Character fd = new AnimalDog(6, 6);
+            //
+            //List<Character> data = new List<Character>();
+            //
+            //data.Add(fd);
         }
     }
 }

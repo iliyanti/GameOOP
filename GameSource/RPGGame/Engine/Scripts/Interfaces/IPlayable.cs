@@ -1,4 +1,4 @@
-﻿namespace RPG.Engine.Scripts.Characters.Shared
+﻿namespace RPG.Engine.Scripts.Interfaces
 {
     interface IPlayable
     {

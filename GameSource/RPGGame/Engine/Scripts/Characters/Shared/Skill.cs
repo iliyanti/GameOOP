@@ -2,19 +2,9 @@
 
 namespace RPG.Engine.Scripts.Characters.Shared
 {
-    public enum SkillType
-    {
-        Base,
-        Area,
-        Ultimate
-    }
-
-    public enum SkillRange
-    {
-        Melee,
-        Range
-    }
-
+    /// <summary>
+    /// A class for the skills
+    /// </summary>
     public class Skill
     {
         private int damage;

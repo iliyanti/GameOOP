@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using RPG.Engine.Scripts.Characters.Playable;
 using RPG.Engine.Scripts.Characters.Shared;
+using RPG.Engine.Scripts.Interfaces;
 
 namespace RPG.Engine.Scripts.Characters.NonPlayable
 {
@@ -16,7 +17,7 @@ namespace RPG.Engine.Scripts.Characters.NonPlayable
         {
         }
 
-        public ~Enemy()
+         ~Enemy()
         {
 
         }

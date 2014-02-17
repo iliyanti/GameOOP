@@ -3,6 +3,9 @@ using RPG.Engine.Scripts.Characters.Playable;
 
 namespace RPG.Account
 {
+    /// <summary>
+    /// Class for the player
+    /// </summary>
     public class Player
     {
         public string Name { get; set; }

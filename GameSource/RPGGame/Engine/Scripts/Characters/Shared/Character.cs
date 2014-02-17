@@ -1,7 +1,9 @@
-﻿using System.Collections.Generic;
-
-namespace RPG.Engine.Scripts.Characters.Shared
+﻿namespace RPG.Engine.Scripts.Characters.Shared
 {
+    using System.Collections.Generic;
+    using Items;
+    using Interfaces;
+
     /// <summary>
     /// A class for the character
     /// </summary>
@@ -18,13 +20,19 @@ namespace RPG.Engine.Scripts.Characters.Shared
             this.HomeColumn = homeColumn;
             this.CurrentDirection = Direction.Still;
             this.LocationColumn = homeColumn;
-            this.LocationRow = LocationRow;
+            this.LocationRow = homeRow;
+            this.Inventory = new List<Item>();
         }
 
         /// <summary>
         /// Gets and sets the total health of the character
         /// </summary>
         public int TotalHealth { get; set; }
+
+        /// <summary>
+        /// Gets and sets the inventory of the character
+        /// </summary>
+        protected List<Item> Inventory { get; set; }
 
         /// <summary>
         /// Symbol for the character
