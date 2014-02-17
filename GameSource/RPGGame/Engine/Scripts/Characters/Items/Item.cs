@@ -1,4 +1,5 @@
-﻿using RPG.Engine.Scripts.Characters.Shared;
+﻿using System;
+using RPG.Engine.Scripts.Characters.Shared;
 
 namespace RPG.Engine.Scripts.Characters.Items
 {
@@ -41,5 +42,9 @@ namespace RPG.Engine.Scripts.Characters.Items
         }
 
 
+        public override string ToString()
+        {
+            return this.Name;
+        }
     }
 }

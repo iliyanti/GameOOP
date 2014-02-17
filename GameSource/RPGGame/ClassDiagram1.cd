@@ -1,0 +1,334 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="RPG.Account.Player" Collapsed="true">
+    <Position X="22" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAQAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Account\Player.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPGGame.Engine.Game" Collapsed="true">
+    <Position X="18.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AoBAAAoAAAAAEAACAAAAAAACAAAgAAAAgYAAAAAAAAA=</HashCode>
+      <FileName>Engine\Game.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG.Engine.Graphics.GraphicalEngine" Collapsed="true">
+    <Position X="22" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAgAQAAAAAAAAAAAAAAAQAAAAAAIAAAA=</HashCode>
+      <FileName>Engine\Graphics\GraphicalEngine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG.Engine.Scripts.Characters.Items.Armor" Collapsed="true">
+    <Position X="2.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAEAAAAAA=</HashCode>
+      <FileName>Engine\Scripts\Characters\Items\Armor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG.Engine.Scripts.Characters.Items.ChestArmor" Collapsed="true">
+    <Position X="2.75" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Engine\Scripts\Characters\Items\ChestArmor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG.Engine.Scripts.Characters.Items.Gun" Collapsed="true">
+    <Position X="5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Engine\Scripts\Characters\Items\Gun.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG.Engine.Scripts.Characters.Items.Item" Collapsed="true">
+    <Position X="2.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEABAAAAQAAAAEQBAAAEACAAAAAgA=</HashCode>
+      <FileName>Engine\Scripts\Characters\Items\Item.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG.Engine.Scripts.Characters.Items.ItemFactory" Collapsed="true">
+    <Position X="16.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAjAAABAAAAAQAAAAAAAAAAAAAAAAAAEAAAAAAAAAAE=</HashCode>
+      <FileName>Engine\Scripts\Characters\Items\ItemFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG.Engine.Scripts.Characters.Items.Potion" Collapsed="true">
+    <Position X="0.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Engine\Scripts\Characters\Items\Potion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG.Engine.Scripts.Characters.NonPlayable.Animal" Collapsed="true">
+    <Position X="5.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Engine\Scripts\Characters\NonPlayable\Animal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG.Engine.Scripts.Characters.NonPlayable.AnimalDog" Collapsed="true">
+    <Position X="5.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Engine\Scripts\Characters\NonPlayable\AnimalDog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG.Engine.Scripts.Characters.NonPlayable.Enemy" Collapsed="true">
+    <Position X="5.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIACAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Engine\Scripts\Characters\NonPlayable\Enemy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="RPG.Engine.Scripts.Characters.NonPlayable.Nazi" Collapsed="true">
+    <Position X="8.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Engine\Scripts\Characters\NonPlayable\Nazi.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG.Engine.Scripts.Characters.NonPlayable.NaziOfficer" Collapsed="true">
+    <Position X="9.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Engine\Scripts\Characters\NonPlayable\NaziOfficer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG.Engine.Scripts.Characters.NonPlayable.NaziSoldier" Collapsed="true">
+    <Position X="7.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Engine\Scripts\Characters\NonPlayable\NaziSoldier.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG.Engine.Scripts.Characters.NonPlayable.SS" Collapsed="true">
+    <Position X="2" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Engine\Scripts\Characters\NonPlayable\SS.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG.Engine.Scripts.Characters.NonPlayable.SSBoss" Collapsed="true">
+    <Position X="0.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Engine\Scripts\Characters\NonPlayable\SSBoss.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG.Engine.Scripts.Characters.NonPlayable.SSOfficer" Collapsed="true">
+    <Position X="3" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Engine\Scripts\Characters\NonPlayable\SSOfficer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG.Engine.Scripts.Characters.Playable.Gosho" Collapsed="true">
+    <Position X="12" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Engine\Scripts\Characters\Playable\Gosho.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG.Engine.Scripts.Characters.Playable.Hero" Collapsed="true">
+    <Position X="13.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAMAiAAAAAAAAAAAAgAAAAAACAAAAAgAAQAA=</HashCode>
+      <FileName>Engine\Scripts\Characters\Playable\Hero.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="RPG.Engine.Scripts.Characters.Playable.Ivan" Collapsed="true">
+    <Position X="14.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Engine\Scripts\Characters\Playable\Ivan.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG.Engine.Scripts.Characters.Quests.Quest" Collapsed="true">
+    <Position X="16.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Engine\Scripts\Characters\Quests\Quest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG.Engine.Scripts.Characters.Shared.Character" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAIACAAICAAAAAAAEAAAAAgKRAAAAAAAYAAA=</HashCode>
+      <FileName>Engine\Scripts\Characters\Shared\Character.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="RPG.Engine.Scripts.Characters.Shared.RandomGenerator" Collapsed="true">
+    <Position X="18.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAABAAAA=</HashCode>
+      <FileName>Engine\Scripts\Characters\Shared\RandomGenerator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG.Engine.Scripts.Characters.Shared.Skill" Collapsed="true">
+    <Position X="20.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAKIAAACiAAAAAAAAAQAAAAFAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Engine\Scripts\Characters\Shared\Skill.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG.Engine.Scripts.Environment.Room" Collapsed="true">
+    <Position X="22" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAACAAAgAABAACAAABAEAAAAgAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Engine\Scripts\Environment\Room.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG.Engine.Scripts.Environment.RoomFactory" Collapsed="true">
+    <Position X="23.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAACAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Engine\Scripts\Environment\RoomFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG.Engine.Sound.SoundEngine" Collapsed="true">
+    <Position X="22" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Engine\Sound\SoundEngine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG.Engine.Views.GameWindow" Collapsed="true">
+    <Position X="20.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Engine\Views\GameWindow.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG.Engine.Views.SelectHero" Collapsed="true">
+    <Position X="16.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Engine\Views\SelectHero.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPGGame.LoginScreen" Collapsed="true">
+    <Position X="20.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAQABAAAACAAAACAAAAAACAgAAABAAAAAA=</HashCode>
+      <FileName>Engine\Views\LoginScreen.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG.Program" Collapsed="true">
+    <Position X="23.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Entry.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG.GameSystem.ExceptionSample" Collapsed="true">
+    <Position X="16.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GameSystem\ExceptionSample.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG.GameSystem.Input" Collapsed="true">
+    <Position X="23.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQQAAAAAAAAAAEAAAABQAAEAAAAAAAFAAAAAAAAAABA=</HashCode>
+      <FileName>GameSystem\Input.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG.GameSystem.LoggerEngine" Collapsed="true">
+    <Position X="18.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GameSystem\LoggerEngine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG.Properties.Resources" Collapsed="true">
+    <Position X="20.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG.Properties.Settings" Collapsed="true">
+    <Position X="18.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="RPG.Engine.Scripts.Characters.Shared.Coordinate" Collapsed="true">
+    <Position X="16.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAFAAAAAAAAAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>Engine\Scripts\Characters\Shared\Coordinate.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Interface Name="RPG.Engine.Scripts.Characters.Shared.IHero" Collapsed="true">
+    <Position X="16.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>Engine\Scripts\Characters\Shared\IHero.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="RPG.Engine.Scripts.Characters.Shared.IMovable" Collapsed="true">
+    <Position X="18.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Engine\Scripts\Characters\Shared\IMovable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="RPG.Engine.Scripts.Characters.Shared.INpcEnemy" Collapsed="true">
+    <Position X="20.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Engine\Scripts\Characters\Shared\INpcEnemy.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="RPG.Engine.Scripts.Characters.Shared.IPlayable" Collapsed="true">
+    <Position X="22" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Engine\Scripts\Characters\Shared\IPlayable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="RPG.Engine.Scripts.Characters.Shared.Direction" Collapsed="true">
+    <Position X="16.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAACAiAAAAAAAI=</HashCode>
+      <FileName>Engine\Scripts\Characters\Shared\Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="RPG.Engine.Scripts.Characters.Shared.ItemRarity" Collapsed="true">
+    <Position X="18.5" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAQAAAAAAAAAQAAAAAAAQAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Engine\Scripts\Characters\Shared\Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="RPG.Engine.Scripts.Characters.Shared.ItemSlot" Collapsed="true">
+    <Position X="20.25" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IQEBAAAQAQACAAAAABABEAAgAQAAAIAAAIAAAAAAAAA=</HashCode>
+      <FileName>Engine\Scripts\Characters\Shared\Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="RPG.Engine.Scripts.Characters.Shared.SkillType" Collapsed="true">
+    <Position X="23.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAQAA=</HashCode>
+      <FileName>Engine\Scripts\Characters\Shared\Skill.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="RPG.Engine.Scripts.Characters.Shared.SkillRange" Collapsed="true">
+    <Position X="22" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAAAAAAAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Engine\Scripts\Characters\Shared\Skill.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

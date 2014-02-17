@@ -1,5 +1,8 @@
 ﻿using System;
 using RPG.Engine.Graphics;
+using RPG.Engine.Scripts.Characters.Items;
+using RPG.Engine.Scripts.Characters.Playable;
+using RPG.Engine.Scripts.Characters.Shared;
 using RPGGame.Engine;
 
 namespace RPG
@@ -20,8 +23,12 @@ namespace RPG
             game.GenerateRooms();
           //  game.Play();
           
+            Item item = ItemFactory.CreateItem();
 
+            Console.WriteLine(item);
+            Character hero = new Ivan(6,6);
 
+            
         }
     }
 }

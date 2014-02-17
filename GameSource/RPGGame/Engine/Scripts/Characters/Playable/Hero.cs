@@ -44,10 +44,10 @@ namespace RPG.Engine.Scripts.Characters.Playable
 
             set
             {
-                if (value.GetType() is ChestArmor)
-                {
+               // if (value.GetType() is ChestArmor)
+               // {
                     this.chestArmor = value;
-                }
+               // }
 
             }
         }
