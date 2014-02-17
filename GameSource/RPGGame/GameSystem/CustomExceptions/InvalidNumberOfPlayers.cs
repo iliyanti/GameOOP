@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace RPG.GameSystem
+namespace RPG.GameSystem.CustomExceptions
 {
     public class InvalidNumberOfPlayers : Exception
     {

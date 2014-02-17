@@ -1,23 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="RPG.Account.Player" Collapsed="true">
-    <Position X="22" Y="1.5" Width="1.5" />
+    <Position X="13" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAIAAAAQAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Account\Player.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="RPG.Engine.Game" Collapsed="true">
-    <Position X="18.5" Y="0.5" Width="1.5" />
+    <Position X="14.75" Y="5.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AoBAAAoAAAAAkAACAAAAAEACAAAgAAAAgYAAAAAAAAg=</HashCode>
       <FileName>Engine\Game.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="RPG.Engine.Graphics.GraphicalEngine" Collapsed="true">
-    <Position X="22" Y="0.5" Width="1.5" />
+    <Position X="18.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAEAAAAAAAAAAQAAAAAAAIAAAAAAAQAAAAAAIAAAA=</HashCode>
+      <HashCode>AgAAEAAAAAAAAAASAAAAAAAIAAAAAAAQAAAAAAIAAAA=</HashCode>
       <FileName>Engine\Graphics\GraphicalEngine.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -50,7 +50,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="RPG.Engine.Scripts.Characters.Items.ItemFactory" Collapsed="true">
-    <Position X="16.75" Y="1.5" Width="1.5" />
+    <Position X="16.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAjAAABAAAAAQAAAAAAAAAAAAAAAAAAEAAAAAAAAAAE=</HashCode>
       <FileName>Engine\Scripts\Characters\Items\ItemFactory.cs</FileName>
@@ -150,7 +150,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="RPG.Engine.Scripts.Characters.Quests.Quest" Collapsed="true">
-    <Position X="16.75" Y="2.5" Width="1.5" />
+    <Position X="13" Y="5.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Engine\Scripts\Characters\Quests\Quest.cs</FileName>
@@ -165,103 +165,103 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="RPG.Engine.Scripts.Characters.Shared.RandomGenerator" Collapsed="true">
-    <Position X="18.5" Y="2.5" Width="1.5" />
+    <Position X="20.25" Y="1.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAABAAAA=</HashCode>
       <FileName>Engine\Scripts\Characters\Shared\RandomGenerator.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="RPG.Engine.Scripts.Characters.Shared.Skill" Collapsed="true">
-    <Position X="20.25" Y="3.5" Width="1.5" />
+    <Position X="14.75" Y="6.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAKIAAACiAAAAAAAAAQAAAAFAAAAAQAAAAAAAAA=</HashCode>
       <FileName>Engine\Scripts\Characters\Shared\Skill.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="RPG.Engine.Scripts.Environment.Room" Collapsed="true">
-    <Position X="22" Y="2.5" Width="1.5" />
+    <Position X="14.75" Y="6" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAQAACAAAgAABAACAAABAEAAAAgAAAAAAAAAAAAIAA=</HashCode>
       <FileName>Engine\Scripts\Environment\Room.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="RPG.Engine.Scripts.Environment.RoomFactory" Collapsed="true">
-    <Position X="23.75" Y="2.5" Width="1.5" />
+    <Position X="16.75" Y="1.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAACAAAAAEAAAAAAAAAAAAA=</HashCode>
       <FileName>Engine\Scripts\Environment\RoomFactory.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="RPG.Engine.Sound.SoundEngine" Collapsed="true">
-    <Position X="22" Y="3.5" Width="1.5" />
+    <Position X="18.5" Y="1.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Engine\Sound\SoundEngine.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="RPG.Engine.Views.GameWindow" Collapsed="true">
-    <Position X="20.25" Y="0.5" Width="1.5" />
+    <Position X="23.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Engine\Views\GameWindow.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="RPG.Engine.Views.SelectHero" Collapsed="true">
-    <Position X="16.75" Y="3.5" Width="1.5" />
+    <Position X="23.75" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Engine\Views\SelectHero.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="RPGGame.LoginScreen" Collapsed="true">
-    <Position X="20.25" Y="1.5" Width="1.5" />
+    <Position X="23.75" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAACAQABAAAACAAAACAAAAAACAgAAABAAAAAA=</HashCode>
       <FileName>Engine\Views\LoginScreen.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="RPG.Program" Collapsed="true">
-    <Position X="23.75" Y="1.5" Width="1.5" />
+    <Position X="14.75" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>Entry.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="RPG.GameSystem.InvalidNumberOfPlayers" Collapsed="true">
-    <Position X="16.75" Y="0.5" Width="1.5" />
+  <Class Name="RPG.GameSystem.CustomExceptions.InvalidNumberOfPlayers" Collapsed="true">
+    <Position X="22" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>GameSystem\InvalidNumberOfPlayers.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>GameSystem\CustomExceptions\InvalidNumberOfPlayers.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="RPG.GameSystem.Input" Collapsed="true">
-    <Position X="23.75" Y="0.5" Width="1.5" />
+  <Class Name="RPG.GameSystem.Controls.Input" Collapsed="true">
+    <Position X="20.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AQAQEAAAAAAAAAFAAABAAAAAQAABBAAAAAAAAAAAAAA=</HashCode>
-      <FileName>GameSystem\Input.cs</FileName>
+      <FileName>GameSystem\Controls\Input.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="RPG.GameSystem.LoggerEngine" Collapsed="true">
-    <Position X="18.5" Y="1.5" Width="1.5" />
+  <Class Name="RPG.GameSystem.ExceptionLogging.LoggerEngine" Collapsed="true">
+    <Position X="20.25" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>GameSystem\LoggerEngine.cs</FileName>
+      <FileName>GameSystem\ExceptionLogging\LoggerEngine.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="RPG.Properties.Resources" Collapsed="true">
-    <Position X="20.25" Y="2.5" Width="1.5" />
+    <Position X="23.75" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
     </TypeIdentifier>
   </Class>
   <Class Name="RPG.Properties.Settings" Collapsed="true">
-    <Position X="18.5" Y="3.5" Width="1.5" />
+    <Position X="23.75" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
     </TypeIdentifier>
   </Class>
   <Struct Name="RPG.Engine.Scripts.Characters.Shared.Coordinate" Collapsed="true">
-    <Position X="16.75" Y="4.75" Width="1.5" />
+    <Position X="0.5" Y="10.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAFAAAAAAAAAAgAAAAAAAAAAAAA=</HashCode>
       <FileName>Engine\Scripts\Characters\Shared\Coordinate.cs</FileName>

@@ -5,7 +5,8 @@ using RPG.Engine.Graphics;
 using RPG.Engine.Scripts.Characters.Playable;
 using RPG.Engine.Scripts.Characters.Shared;
 using RPG.Engine.Scripts.Environment;
-using RPG.GameSystem;
+using RPG.GameSystem.Controls;
+using RPG.GameSystem.CustomExceptions;
 using RPGGame;
 
 namespace RPG.Engine

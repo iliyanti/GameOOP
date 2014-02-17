@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using RPG.Engine.Scripts.Characters.Shared;
-using RPG.Engine.Scripts.Environment;
-
-namespace RPG.Engine.Graphics
+﻿namespace RPG.Engine.Graphics
 {
+    using Scripts.Characters.Shared;
+    using Scripts.Environment;
+    using System;
+    using System.Collections.Generic;
+
     /// <summary>
     /// A class for the graphical engine. It is responsible for printing objects on the screen.
     /// </summary>
@@ -50,7 +50,7 @@ namespace RPG.Engine.Graphics
         /// <summary>
         /// Draws a room
         /// </summary>
-        /// <param name="room"></param>
+        /// <param name="room">input a room to be printed</param>
         public static void DrawRoom(Room room)
         {
             for (int row = 0; row < room.TotalRows; row++)
@@ -65,7 +65,7 @@ namespace RPG.Engine.Graphics
         }
 
         /// <summary>
-        /// SEts the default values of the screen.
+        /// Sets the default values of the widow.
         /// </summary>
         public static void PrepareScreen()
         {

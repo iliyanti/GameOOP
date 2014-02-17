@@ -1,4 +1,4 @@
-﻿namespace RPG.GameSystem
+﻿namespace RPG.GameSystem.ExceptionLogging
 {
     public static class LoggerEngine
     {

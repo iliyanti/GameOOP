@@ -6,8 +6,19 @@ namespace RPG.Engine.Scripts.Characters.NonPlayable
 {
     public class Enemy : Character, INpcEnemy
     {
-        public Enemy(int homeRow, int homeColumn) : base(homeRow, homeColumn)
+        /// <summary>
+        /// Initializes a new instance of the Enemy class.
+        /// </summary>
+        /// <param name="homeRow"></param>
+        /// <param name="homeColumn"></param>
+        protected Enemy(int homeRow, int homeColumn)
+            : base(homeRow, homeColumn)
         {
+        }
+
+        public ~Enemy()
+        {
+
         }
 
         public void CalcPath(IEnumerable<Hero> heroes)
@@ -26,7 +37,7 @@ namespace RPG.Engine.Scripts.Characters.NonPlayable
             }
         }
 
-   
+
 
 
         public override void Move()

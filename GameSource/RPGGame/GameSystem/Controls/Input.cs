@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using RPG.Engine.Scripts.Characters.Playable;
 using RPG.Engine.Scripts.Characters.Shared;
 
-namespace RPG.GameSystem
+namespace RPG.GameSystem.Controls
 {
     public static class Input
     {
