@@ -39,10 +39,10 @@ namespace RPG.Engine.Scripts.Characters.Playable
 
             set
             {
-               // if (value.GetType() is ChestArmor)
-               // {
-                    this.chestArmor = value;
-               // }
+                // if (value.GetType() is ChestArmor)
+                // {
+                this.chestArmor = value;
+                // }
 
             }
         }
@@ -52,8 +52,39 @@ namespace RPG.Engine.Scripts.Characters.Playable
         /// </summary>
         public override void Move()
         {
-            throw new global::System.NotImplementedException();
+            if (this.Path.Count != 0)
+            {
+                if (this.Path.Peek() == Direction.Up)
+                {
+                    this.CurrentDirection = Direction.Up;
+                    this.LocationRow--;
+                    this.Path.Pop();
+                }
+                else if (this.Path.Peek() == Direction.Right)
+                {
+                    this.CurrentDirection = Direction.Right;
+                    this.LocationColumn++;
+                    this.Path.Pop();
+                }
+                else if (this.Path.Peek() == Direction.Down)
+                {
+                    this.CurrentDirection = Direction.Down;
+                    this.LocationRow++;
+                    this.Path.Pop();
+                }
+                else if (this.Path.Peek() == Direction.Left)
+                {
+                    this.CurrentDirection = Direction.Left;
+                    this.LocationColumn--;
+                    this.Path.Pop();
+                }
+            }
+            else
+            {
+                
+            }
         }
+
 
         /// <summary>
         /// Checks the health of the hero

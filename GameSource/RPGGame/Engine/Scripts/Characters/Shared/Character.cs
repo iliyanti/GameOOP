@@ -22,6 +22,7 @@
             this.LocationColumn = homeColumn;
             this.LocationRow = homeRow;
             this.Inventory = new List<Item>();
+            this.Path = new Stack<Direction>();
         }
 
         /// <summary>

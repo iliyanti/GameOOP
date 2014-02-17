@@ -45,14 +45,14 @@
   <Class Name="RPG.Engine.Scripts.Characters.Items.Item" Collapsed="true">
     <Position X="2.75" Y="6.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAEABAAAAQAAAAEQBAAAEACAAAAAgA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAEABAAAAQAAAAEQBAAAAACAAAAAgA=</HashCode>
       <FileName>Engine\Scripts\Characters\Items\Item.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="RPG.Engine.Scripts.Characters.Items.ItemFactory" Collapsed="true">
     <Position X="16.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAjAAABAAAAAQAAAAAAAAAAAAAAAAAAEAAAAAAAAAAE=</HashCode>
+      <HashCode>AAiAAABAAAAAQAAAAAAAAAAAAAAAAEAEAAAAAAAAAAE=</HashCode>
       <FileName>Engine\Scripts\Characters\Items\ItemFactory.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -159,7 +159,7 @@
   <Class Name="RPG.Engine.Scripts.Characters.Shared.Character" Collapsed="true">
     <Position X="7.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAACAAAAIACAAICAAAAAAAECAAAAgKRACAAAAAYAAA=</HashCode>
+      <HashCode>AAAACAAAAIACAAICAAAAAAAECAAAAgKRACAAAgAYAAA=</HashCode>
       <FileName>Engine\Scripts\Characters\Shared\Character.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -195,7 +195,7 @@
   <Class Name="RPG.Engine.Sound.SoundEngine" Collapsed="true">
     <Position X="18.5" Y="1.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAQAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Engine\Sound\SoundEngine.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -244,7 +244,7 @@
   <Class Name="RPG.GameSystem.ExceptionLogging.LoggerEngine" Collapsed="true">
     <Position X="20.25" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAQAAAAAAAAAAAAAAAAAAAAgEAAAAAAAAAAAAAAA=</HashCode>
       <FileName>GameSystem\ExceptionLogging\LoggerEngine.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -260,6 +260,20 @@
       <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
     </TypeIdentifier>
   </Class>
+  <Class Name="RPG.Engine.Scripts.Characters.NonPlayable.EnemyFactory" Collapsed="true">
+    <Position X="13.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Engine\Scripts\Characters\NonPlayable\EnemyFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG.GameSystem.ExceptionLogging.Messages" Collapsed="true">
+    <Position X="15" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GameSystem\ExceptionLogging\Messages.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Struct Name="RPG.Engine.Scripts.Characters.Shared.Coordinate" Collapsed="true">
     <Position X="0.5" Y="10.5" Width="1.5" />
     <TypeIdentifier>
@@ -267,32 +281,32 @@
       <FileName>Engine\Scripts\Characters\Shared\Coordinate.cs</FileName>
     </TypeIdentifier>
   </Struct>
-  <Interface Name="RPG.Engine.Scripts.Characters.Shared.IHero" Collapsed="true">
-    <Position X="16.75" Y="6" Width="1.5" />
+  <Interface Name="RPG.Engine.Scripts.Interfaces.IHero" Collapsed="true">
+    <Position X="13.25" Y="8.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA=</HashCode>
-      <FileName>Engine\Scripts\Characters\Shared\IHero.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>Engine\Scripts\Interfaces\IHero.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="RPG.Engine.Scripts.Characters.Shared.IMovable" Collapsed="true">
-    <Position X="18.5" Y="6" Width="1.5" />
+  <Interface Name="RPG.Engine.Scripts.Interfaces.IMovable" Collapsed="true">
+    <Position X="15" Y="8.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Engine\Scripts\Characters\Shared\IMovable.cs</FileName>
+      <FileName>Engine\Scripts\Interfaces\IMovable.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="RPG.Engine.Scripts.Characters.Shared.INpcEnemy" Collapsed="true">
-    <Position X="20.25" Y="6" Width="1.5" />
+  <Interface Name="RPG.Engine.Scripts.Interfaces.INpcEnemy" Collapsed="true">
+    <Position X="13.25" Y="9.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Engine\Scripts\Characters\Shared\INpcEnemy.cs</FileName>
+      <FileName>Engine\Scripts\Interfaces\INpcEnemy.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="RPG.Engine.Scripts.Characters.Shared.IPlayable" Collapsed="true">
-    <Position X="22" Y="6" Width="1.5" />
+  <Interface Name="RPG.Engine.Scripts.Interfaces.IPlayable" Collapsed="true">
+    <Position X="15" Y="9.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Engine\Scripts\Characters\Shared\IPlayable.cs</FileName>
+      <FileName>Engine\Scripts\Interfaces\IPlayable.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Enum Name="RPG.Engine.Scripts.Characters.Shared.Direction" Collapsed="true">
@@ -320,14 +334,14 @@
     <Position X="23.75" Y="7" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAQAA=</HashCode>
-      <FileName>Engine\Scripts\Characters\Shared\Skill.cs</FileName>
+      <FileName>Engine\Scripts\Characters\Shared\Enums.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Enum Name="RPG.Engine.Scripts.Characters.Shared.SkillRange" Collapsed="true">
     <Position X="22" Y="7" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAACAAAAAAAAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Engine\Scripts\Characters\Shared\Skill.cs</FileName>
+      <FileName>Engine\Scripts\Characters\Shared\Enums.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Font Name="Segoe UI" Size="9" />

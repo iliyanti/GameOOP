@@ -22,7 +22,9 @@
             foreach (var character in characters)
             {
                 Console.SetCursorPosition(character.LocationColumn, character.LocationRow);
+                //Console.Write(character.Sprite.ToString());
                 Console.Write(character.Sprite);
+               // Console.SetCursorPosition(79,59);
             }
         }
 
@@ -35,7 +37,7 @@
             foreach (var character in characters)
             {
                 Console.SetCursorPosition(character.LocationColumn, character.LocationRow);
-                Console.Write(" ");
+                Console.Write(' ');
             }
         }
 

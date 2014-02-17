@@ -17,6 +17,15 @@
         /// </summary>
         private ItemSlot slot;
 
+        private char sprite;
+
+        public char Sprite
+        {
+            get { return this.sprite; }
+            set { this.sprite = value; }
+        }
+        
+
         /// <summary>
         /// Slots that it takes in the inventory
         /// </summary>

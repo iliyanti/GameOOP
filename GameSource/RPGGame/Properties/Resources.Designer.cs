@@ -59,5 +59,14 @@ namespace RPG.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter number of players: .
+        /// </summary>
+        internal static string Game_AskForNumberOfPlayers_Enter_number_of_players__ {
+            get {
+                return ResourceManager.GetString("Game_AskForNumberOfPlayers_Enter_number_of_players__", resourceCulture);
+            }
+        }
     }
 }
