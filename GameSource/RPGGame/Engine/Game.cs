@@ -1,4 +1,7 @@
-﻿namespace RPG.Engine
+﻿using System;
+using System.Threading;
+
+namespace RPG.Engine
 {
     using System.Collections.Generic;
     using System.Windows.Forms;
@@ -79,10 +82,28 @@
             this.Rooms.Add(room);
         }
 
+        public void GenerateHeroes()
+        {
+            if (numbersOfPlayers == 1)
+            {
+                Hero ivan = new Ivan(1,1);
+                this.Heroes.Add(ivan);
+            }
+            else if (this.NumberOfPlayers == 2)
+            {
+                Hero ivan = new Ivan(1,1);
+                Hero gosho = new Gosho(2,2);
+                this.Heroes.Add(ivan);
+                this.Heroes.Add(gosho);
+            }
+        }
 
         public void AskForNumberOfPlayers()
         {
-            this.NumberOfPlayers = 1;
+            GraphicalEngine.ClearScreen();
+            Console.WriteLine("Enter number of players: ");
+            
+            this.NumberOfPlayers = int.Parse(Console.ReadLine());
         }
 
         public void SelectHeroes()
@@ -99,20 +120,23 @@
         /// </summary>
         public void Play()
         {
+            GraphicalEngine.ClearScreen();
             GraphicalEngine.DrawRoom(this.Rooms[0]);
-            GraphicalEngine.DrawCharacters(this.Characters);
+            GraphicalEngine.DrawCharacters(this.Heroes);
             while (true)
             {
                 Input.GetInput(this.Heroes);
 
-                GraphicalEngine.DrawEmpty(this.Characters);
-                foreach (var character in this.Characters)
+                GraphicalEngine.DrawEmpty(this.Heroes);
+                foreach (var character in this.Heroes)
                 {
-                    character.CheckHealth();
+                   // character.CheckHealth();
                     character.Move();
                 }
 
-                GraphicalEngine.DrawCharacters(this.Characters);
+                GraphicalEngine.DrawCharacters(this.Heroes);
+
+                Thread.Sleep(100);
             }
         }
 

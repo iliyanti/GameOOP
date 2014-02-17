@@ -23,6 +23,8 @@ namespace RPG
             Game game = new Game();
 
             game.GenerateRooms();
+            game.AskForNumberOfPlayers();
+            game.GenerateHeroes();
             game.Play();
 
             //Item item = ItemFactory.Create();
