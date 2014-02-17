@@ -1,9 +1,9 @@
 ﻿using System;
+using RPG.Engine;
 using RPG.Engine.Graphics;
 using RPG.Engine.Scripts.Characters.Items;
 using RPG.Engine.Scripts.Characters.Playable;
 using RPG.Engine.Scripts.Characters.Shared;
-using RPGGame.Engine;
 
 namespace RPG
 {

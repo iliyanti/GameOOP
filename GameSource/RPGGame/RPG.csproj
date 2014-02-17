@@ -102,7 +102,7 @@
     <Compile Include="Entry.cs" />
     <Compile Include="GameSystem\Input.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="GameSystem\ExceptionSample.cs" />
+    <Compile Include="GameSystem\InvalidNumberOfPlayers.cs" />
     <Compile Include="GameSystem\LoggerEngine.cs" />
     <EmbeddedResource Include="Engine\Views\GameWindow.resx">
       <DependentUpon>GameWindow.cs</DependentUpon>
@@ -139,10 +139,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Data\Graphics\TextFile1.txt" />
-    <None Include="Data\Graphics\Tiles28x46Player.png" />
-    <None Include="Data\Graphics\Tile16x16Black.png" />
-    <None Include="Data\Graphics\Tile16x16Empty.png" />
-    <None Include="Data\Graphics\Tile16x16Wall.png" />
     <Content Include="Data\Sounds\TextFile1.txt" />
     <Content Include="Data\TextFile1.txt" />
     <Content Include="Data\Graphics\Room1.txt">

@@ -7,17 +7,17 @@
       <FileName>Account\Player.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="RPGGame.Engine.Game" Collapsed="true">
+  <Class Name="RPG.Engine.Game" Collapsed="true">
     <Position X="18.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AoBAAAoAAAAAEAACAAAAAAACAAAgAAAAgYAAAAAAAAA=</HashCode>
+      <HashCode>AoBAAAoAAAAAkAACAAAAAEACAAAgAAAAgYAAAAAAAAg=</HashCode>
       <FileName>Engine\Game.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="RPG.Engine.Graphics.GraphicalEngine" Collapsed="true">
     <Position X="22" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAEAAAAAAAAgAQAAAAAAAAAAAAAAAQAAAAAAIAAAA=</HashCode>
+      <HashCode>AAAAEAAAAAAAAAAQAAAAAAAIAAAAAAAQAAAAAAIAAAA=</HashCode>
       <FileName>Engine\Graphics\GraphicalEngine.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -159,7 +159,7 @@
   <Class Name="RPG.Engine.Scripts.Characters.Shared.Character" Collapsed="true">
     <Position X="7.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAACAAAAIACAAICAAAAAAAEAAAAAgKRAAAAAAAYAAA=</HashCode>
+      <HashCode>AAAACAAAAIACAAICAAAAAAAECAAAAgKRACAAAAAYAAA=</HashCode>
       <FileName>Engine\Scripts\Characters\Shared\Character.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -227,17 +227,17 @@
       <FileName>Entry.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="RPG.GameSystem.ExceptionSample" Collapsed="true">
+  <Class Name="RPG.GameSystem.InvalidNumberOfPlayers" Collapsed="true">
     <Position X="16.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>GameSystem\ExceptionSample.cs</FileName>
+      <FileName>GameSystem\InvalidNumberOfPlayers.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="RPG.GameSystem.Input" Collapsed="true">
     <Position X="23.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AQQAAAAAAAAAAEAAAABQAAEAAAAAAAFAAAAAAAAAABA=</HashCode>
+      <HashCode>AQAQEAAAAAAAAAFAAABAAAAAQAABBAAAAAAAAAAAAAA=</HashCode>
       <FileName>GameSystem\Input.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -277,7 +277,7 @@
   <Interface Name="RPG.Engine.Scripts.Characters.Shared.IMovable" Collapsed="true">
     <Position X="18.5" Y="6" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAIAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Engine\Scripts\Characters\Shared\IMovable.cs</FileName>
     </TypeIdentifier>
   </Interface>

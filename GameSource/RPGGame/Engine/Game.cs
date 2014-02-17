@@ -2,34 +2,60 @@
 using System.Windows.Forms;
 using RPG.Account;
 using RPG.Engine.Graphics;
-using RPG.Engine.Scripts.Characters.NonPlayable;
 using RPG.Engine.Scripts.Characters.Playable;
 using RPG.Engine.Scripts.Characters.Shared;
 using RPG.Engine.Scripts.Environment;
+using RPG.GameSystem;
+using RPGGame;
 
-namespace RPGGame.Engine
+namespace RPG.Engine
 {
+    /// <summary>
+    /// A class for the game
+    /// </summary>
     public class Game
     {
+        /// <summary>
+        /// Number of players
+        /// </summary>
         private int numbersOfPlayers;
 
-        public int NumberOfPlayers
-        {
-            get { return numbersOfPlayers; }
-            set { numbersOfPlayers = value; }
-        }
-
+        /// <summary>
+        /// Initializes a new instance of the Game class
+        /// </summary>
         public Game()
         {
             this.Rooms = new List<Room>();
             this.Characters = new List<Character>();
+            this.Heroes = new List<Hero>();
         }
 
+        /// <summary>
+        /// Gets or sets the number of players.
+        /// </summary>
+        private int NumberOfPlayers
+        {
+            get
+            {
+                return numbersOfPlayers;
+            }
 
-        public List<Player> Players = new List<Player>();
-        public List<Room> Rooms { get; set; }
+            set
+            {
+                if (value < 1 && value > 2)
+                {
+                    throw new InvalidNumberOfPlayers();
+                }
 
-        public List<Character> Characters { get; set; }
+                numbersOfPlayers = value;
+            }
+        }
+        private List<Hero> Heroes { get; set; }
+
+        private List<Player> Players = new List<Player>();
+        private List<Room> Rooms { get; set; }
+
+        private List<Character> Characters { get; set; }
 
         public void SaveExisitingPlayers()
         {
@@ -55,9 +81,6 @@ namespace RPGGame.Engine
 
         public void AskForNumberOfPlayers()
         {
-
-            // TODO Graphical - Ask for number of players
-            // TODO Fix this function.
             this.NumberOfPlayers = 1;
         }
 
@@ -70,26 +93,42 @@ namespace RPGGame.Engine
             }
         }
 
+        /// <summary>
+        /// Method to play the game
+        /// </summary>
         public void Play()
         {
             GraphicalEngine.DrawRoom(this.Rooms[0]);
-            GraphicalEngine.Draw(this.Characters);
+            GraphicalEngine.DrawCharacters(this.Characters);
             while (true)
             {
+                Input.GetInput(this.Heroes);
 
-                foreach (var hero in this.Characters)
+                GraphicalEngine.DrawEmpty(this.Characters);
+                foreach (var character in this.Characters)
                 {
-                    hero.CheckHealth();
-                    hero.Move();
+                    character.CheckHealth();
+                    character.Move();
                 }
 
-             
-
+                GraphicalEngine.DrawCharacters(this.Characters);
             }
         }
 
+        /// <summary>
+        /// Method to show the intro screen
+        /// </summary>
+        public void ShowIntoScreen()
+        {
+
+        }
+
+        /// <summary>
+        /// Method to show the end screen
+        /// </summary>
+        public void ShowEndScreen()
+        {
+
+        }
     }
-
-
-
 }

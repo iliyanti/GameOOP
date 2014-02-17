@@ -12,8 +12,7 @@ namespace RPG.Engine.Scripts.Characters.Playable
     {
         private Item chestArmor;
 
-
-        public Hero(int homeRow, int homeColumn)
+        protected Hero(int homeRow, int homeColumn)
             : base(homeRow, homeColumn)
         {
             this.Quests = new List<Quest>();
@@ -25,6 +24,7 @@ namespace RPG.Engine.Scripts.Characters.Playable
         /// </summary>
         private List<Item> Inventory { get; set; }
 
+        public int Experience { get; set; }
         public int NextLevelExperience { get; set; }
 
         /// <summary>
@@ -88,5 +88,7 @@ namespace RPG.Engine.Scripts.Characters.Playable
         {
             this.Inventory.Add(item);
         }
+
+        
     }
 }

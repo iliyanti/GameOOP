@@ -76,7 +76,7 @@ namespace RPG.Engine.Scripts.Characters.Shared
         /// </summary>
         public int Health { get; set; }
 
-        public Stack<Direction> Path { get; set; }
+        protected Stack<Direction> Path { get; set; }
 
         /// <summary>
         /// Method to move the character
@@ -87,5 +87,15 @@ namespace RPG.Engine.Scripts.Characters.Shared
         /// Checks if the character is dead.
         /// </summary>
         public abstract void CheckHealth();
+
+        public void AddToPath(Direction direction)
+        {
+            this.Path.Push(direction);
+        }
+
+        public void RemovePath()
+        {
+            this.Path.Pop();
+        }
     }
 }
