@@ -8,7 +8,7 @@ namespace RPG.Engine.Scripts.Characters.Items
 
         public Gun(string name, ItemRarity itemRarity, int slots, int damage) : base(name, itemRarity, slots)
         {
-            this.damage = damage;
+            this.Damage = damage;
         }
 
         public int Damage
