@@ -29,7 +29,7 @@
         }
 
         /// <summary>
-        /// Draw an empty space on the characters' existing position
+        /// Draw an Empty space on the characters' existing position
         /// </summary>
         /// <param name="characters">input a list of characters</param>
         public static void DrawEmpty(IEnumerable<Character> characters)

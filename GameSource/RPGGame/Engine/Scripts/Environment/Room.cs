@@ -1,4 +1,7 @@
-﻿namespace RPG.Engine.Scripts.Environment
+﻿using System.Collections.Generic;
+using RPG.Engine.Scripts.Characters.Shared;
+
+namespace RPG.Engine.Scripts.Environment
 {
     using System;
     using System.IO;
@@ -33,6 +36,11 @@
         private char[,] Matrix { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        public List<Coordinate> Empty { get; set; }
+
+        /// <summary>
         /// Initializes a new instance of the Room class
         /// </summary>
         public Room()
@@ -40,6 +48,7 @@
             this.TotalRows = MaxRows;
             this.TotalColumns = MaxColumns;
             this.Matrix = new char[MaxRows, MaxColumns];
+            this.Empty = new List<Coordinate>();
         }
 
         /// <summary>
@@ -88,11 +97,14 @@
                 }
                 else if (!this.ValidateColumn(column))
                 {
+                    Console.WriteLine(row + " " + column);
                     throw new ArgumentOutOfRangeException("There is not such kind of column");
                 }
                 else
                 {
+                    Console.WriteLine(row + " " + column);
                     throw new ArgumentOutOfRangeException("There is not such kind of row");
+
                 }
             }
 
@@ -104,10 +116,14 @@
                 }
                 else if (!this.ValidateColumn(column))
                 {
+                    Console.WriteLine(row + " " + column);
+
                     throw new ArgumentOutOfRangeException("There is not such kind of column");
                 }
                 else
                 {
+                    Console.WriteLine(row + " " + column);
+
                     throw new ArgumentOutOfRangeException("There is not such kind of row");
                 }
             }
@@ -130,6 +146,11 @@
                     for (int c = 0; c < this.TotalColumns; c++)
                     {
                        this.Matrix[r, c] = line[c];
+
+                        if (line[c] == '.')
+                        {
+                            this.Empty.Add(new Coordinate(r,c, 0));
+                        }
                     }
                 }
             }

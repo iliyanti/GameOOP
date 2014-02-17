@@ -1,13 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using RPG.Engine.Scripts.Characters.Items;
-using RPG.Engine.Scripts.Characters.Playable;
-using RPG.Engine.Scripts.Characters.Shared;
-using RPG.Engine.Scripts.Environment;
-using RPG.Engine.Scripts.Interfaces;
-
-namespace RPG.Engine.Scripts.Characters.NonPlayable
+﻿namespace RPG.Engine.Scripts.Characters.NonPlayable
 {
+    using System;
+    using System.Collections.Generic;
+    using Items;
+    using Playable;
+    using Shared;
+    using Environment;
+    using Interfaces;
+
     public class Enemy : Character, INpcEnemy
     {
         /// <summary>
@@ -22,6 +22,11 @@ namespace RPG.Engine.Scripts.Characters.NonPlayable
         }
 
         /// <summary>
+        /// Gets the experience that the enemy awards
+        /// </summary>
+        public int Experience { get; private set; }
+
+        /// <summary>
         /// Loot item that is dropped on the ground
         /// </summary>
         public Item LootItem { get; private set; }
@@ -31,61 +36,15 @@ namespace RPG.Engine.Scripts.Characters.NonPlayable
         {
             int distance = 0;
             Hero closestHero;
-            var edges = new List<Coordinate[,]>();
 
             foreach (var hero in heroes)
             {
                 var data = new Queue<Coordinate>();
                 data.Enqueue(new Coordinate(this.LocationRow, this.LocationColumn, 0));
 
-                bool[,] marked = new bool[room.TotalRows, room.TotalColumns];
-                marked[1, 1] = true;
+               
 
-                Coordinate[,] edgeTo = new Coordinate[room.TotalRows, room.TotalColumns];
-
-                while (data.Count != 0)
-                {
-                    Coordinate current = data.Dequeue();
-
-                    if (current.Row  == hero.LocationColumn && current.Column == hero.LocationColumn)
-                    {
-                        break;
-                    }
-                    //up
-                    if (room[current.Row + 1, current.Column] != 1 && marked[current.Row + 1, current.Column] == false)
-                    {
-                        Console.WriteLine(current.Row + " " + current.Column);
-                        data.Enqueue(new Coordinate(current.Row + 1, current.Column, current.DistanceFromOrigin + 1));
-                        marked[current.Row + 1, current.Column] = true;
-                        edgeTo[current.Row + 1, current.Column] = new Coordinate(current.Row, current.Column, current.DistanceFromOrigin + 1);
-                    }
-
-                    //down
-                    if (room[current.Row - 1, current.Column] != 1 && marked[current.Row - 1, current.Column] == false)
-                    {
-                        data.Enqueue(new Coordinate(current.Row - 1, current.Column, current.DistanceFromOrigin + 1));
-                        marked[current.Row - 1, current.Column] = true;
-                        edgeTo[current.Row - 1, current.Column] = new Coordinate(current.Row, current.Column, current.DistanceFromOrigin + 1);
-
-                    }
-
-                    //right
-                    if (room[current.Row, current.Column + 1] != 1 && marked[current.Row, current.Column + 1] == false)
-                    {
-                        data.Enqueue(new Coordinate(current.Row, current.Column + 1, current.DistanceFromOrigin + 1));
-                        marked[current.Row, current.Column + 1] = true;
-                        edgeTo[current.Row, current.Column + 1] = new Coordinate(current.Row, current.Column, current.DistanceFromOrigin + 1);
-
-                    }
-
-                    //left
-                    if (room[current.Row, current.Column - 1] != 1 && marked[current.Row, current.Column - 1] == false)
-                    {
-                        data.Enqueue(new Coordinate(current.Row, current.Column - 1, current.DistanceFromOrigin + 1));
-                        marked[current.Row, current.Column - 1] = true;
-                        edgeTo[current.Row, current.Column - 1] = new Coordinate(current.Row, current.Column, current.DistanceFromOrigin + 1);
-                    }
-                }
+               
             }
         }
 
@@ -121,6 +80,6 @@ namespace RPG.Engine.Scripts.Characters.NonPlayable
             // TODO Show loot
         }
 
-      
+
     }
 }

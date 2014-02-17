@@ -68,6 +68,7 @@
     <Compile Include="Engine\Scripts\Characters\NonPlayable\SSOfficer.cs" />
     <Compile Include="Engine\Scripts\Characters\Playable\Gosho.cs" />
     <Compile Include="Engine\Scripts\Characters\Playable\Hero.cs" />
+    <Compile Include="Engine\Scripts\Characters\Playable\HeroFactory.cs" />
     <Compile Include="Engine\Scripts\Characters\Playable\Ivan.cs" />
     <Compile Include="Engine\Scripts\Characters\Quests\Quest.cs" />
     <Compile Include="Engine\Scripts\Characters\Shared\Character.cs" />
