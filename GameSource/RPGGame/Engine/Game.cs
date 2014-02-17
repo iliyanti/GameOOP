@@ -4,6 +4,7 @@ using RPG.Account;
 using RPG.Engine.Graphics;
 using RPG.Engine.Scripts.Characters.NonPlayable;
 using RPG.Engine.Scripts.Characters.Playable;
+using RPG.Engine.Scripts.Characters.Shared;
 using RPG.Engine.Scripts.Environment;
 
 namespace RPGGame.Engine
@@ -21,17 +22,14 @@ namespace RPGGame.Engine
         public Game()
         {
             this.Rooms = new List<Room>();
-            this.Heroes = new List<Hero>();
-            this.Enemies = new List<Enemy>();
+            this.Characters = new List<Character>();
         }
 
 
         public List<Player> Players = new List<Player>();
         public List<Room> Rooms { get; set; }
 
-        public List<Hero> Heroes { get; set; }
-
-        public List<Enemy> Enemies { get; set; }
+        public List<Character> Characters { get; set; }
 
         public void SaveExisitingPlayers()
         {
@@ -75,21 +73,17 @@ namespace RPGGame.Engine
         public void Play()
         {
             GraphicalEngine.DrawRoom(this.Rooms[0]);
-            GraphicalEngine.Draw(this.Heroes);
+            GraphicalEngine.Draw(this.Characters);
             while (true)
             {
 
-                foreach (var hero in this.Heroes)
+                foreach (var hero in this.Characters)
                 {
                     hero.CheckHealth();
                     hero.Move();
                 }
 
-                foreach (var enemy in this.Enemies)
-                {
-                    enemy.Move();
-                }
-
+             
 
             }
         }

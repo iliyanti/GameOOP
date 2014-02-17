@@ -18,7 +18,7 @@ namespace RPG
             Game game = new Game();
 
             game.GenerateRooms();
-            game.Play();
+          //  game.Play();
           
 
 

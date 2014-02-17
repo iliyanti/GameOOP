@@ -5,51 +5,88 @@ using RPG.Engine.Scripts.Characters.Shared;
 
 namespace RPG.Engine.Scripts.Characters.Playable
 {
-    public class Hero: Character, IMovable, IHero, IPlayable
+    /// <summary>
+    /// A class for the hero
+    /// </summary>
+    public abstract class Hero : Character, IHero, IPlayable
     {
-        private List<Item> inventory;
-        private Item shouldersItem;
-        private List<Quest> quests;
+        private Item chestArmor;
 
-        
-        public List<Quest> Quests
+
+        public Hero(int homeRow, int homeColumn)
+            : base(homeRow, homeColumn)
         {
-            get { return this.quests; }
-            set { this.quests = value; }
-        }
-        
-        public Item ShouldersItem
-        {
-            get { return shouldersItem; }
-            set { shouldersItem = value; }
+            this.Quests = new List<Quest>();
+            this.Inventory = new List<Item>();
         }
 
-        
-        public List<Item> Inventory
+        /// <summary>
+        /// Gets and sets the inventory
+        /// </summary>
+        private List<Item> Inventory { get; set; }
+
+        public int NextLevelExperience { get; set; }
+
+        /// <summary>
+        /// Gets and sets the quests
+        /// </summary>
+        private List<Quest> Quests { get; set; }
+
+        /// <summary>
+        /// Gets and sets the chest armor
+        /// </summary>
+        public Item ChestArmor
         {
-            get { return this.inventory; }
-            set { this.inventory = value; }
+            get
+            {
+                return this.chestArmor;
+            }
+
+            set
+            {
+                if (value.GetType() is ChestArmor)
+                {
+                    this.chestArmor = value;
+                }
+
+            }
         }
 
-
-        public void Move()
+        /// <summary>
+        /// Method to move the character base on his current path
+        /// </summary>
+        public override void Move()
         {
             throw new global::System.NotImplementedException();
         }
 
-        public int NextLevelExperience { get; set; }
-
-        public void CheckHealth()
+        /// <summary>
+        /// Checks the health of the hero
+        /// </summary>
+        public override void CheckHealth()
         {
-            if (this.Health >= 0)
+            if (this.Health <= 0)
             {
-              
+                this.LocationColumn = this.HomeColumn;
+                this.LocationRow = this.HomeRow;
             }
         }
 
+        /// <summary>
+        /// Gets the user input an saves it to a path
+        /// </summary>
         public void GetUsetInput()
         {
             throw new System.NotImplementedException();
+        }
+
+        /// <summary>
+        /// Method to add an item to the inventory
+        /// </summary>
+        /// <param name="item">input an item</param>
+        public void AddItem(Item item)
+        {
+            this.Inventory.Add(item);
         }
     }
 }

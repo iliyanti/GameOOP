@@ -8,5 +8,8 @@ namespace RPG.Engine.Scripts.Characters.NonPlayable
 {
     public class SSOfficer :SS
     {
+        public SSOfficer(int homeRow, int homeColumn) : base(homeRow, homeColumn)
+        {
+        }
     }
 }

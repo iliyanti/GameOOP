@@ -4,9 +4,12 @@ using RPG.Engine.Scripts.Characters.Shared;
 
 namespace RPG.Engine.Scripts.Characters.NonPlayable
 {
-    public class Enemy : Character, IMovable, INpcEnemy
+    public class Enemy : Character, INpcEnemy
     {
-        public Stack<Direction> Path { get; set; }
+        public Enemy(int homeRow, int homeColumn) : base(homeRow, homeColumn)
+        {
+        }
+
         public void CalcPath(IEnumerable<Hero> heroes)
         {
             int distance = 0;
@@ -26,7 +29,7 @@ namespace RPG.Engine.Scripts.Characters.NonPlayable
    
 
 
-        public void Move()
+        public override void Move()
         {
             if (this.Path.Count != 0)
             {
@@ -51,6 +54,11 @@ namespace RPG.Engine.Scripts.Characters.NonPlayable
                     this.Path.Pop();
                 }
             }
+        }
+
+        public override void CheckHealth()
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

@@ -2,7 +2,7 @@
 {
     interface IHero
     {
-         int NextLevelExperience { get; set; }
+        int NextLevelExperience { get; set; }
 
         void CheckHealth();
     }

@@ -2,6 +2,8 @@
 {
     public class Nazi : Enemy
     {
-
+        public Nazi(int homeRow, int homeColumn) : base(homeRow, homeColumn)
+        {
+        }
     }
 }

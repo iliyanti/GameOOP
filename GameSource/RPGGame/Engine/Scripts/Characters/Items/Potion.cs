@@ -1,28 +1,12 @@
-﻿namespace RPG.Engine.Scripts.Characters.Items
-{
-    public enum PotionType
-    {
-        Health = 0,
-        Mana = 1,
-    }
+﻿using RPG.Engine.Scripts.Characters.Shared;
 
+namespace RPG.Engine.Scripts.Characters.Items
+{
     public class Potion : Item
     {
-        private const ItemRarity potionsRarity = ItemRarity.Common;
-        private const ItemSlot potionSlot = ItemSlot.NoSlot;
-        private PotionType type;
+        public Potion(string name, ItemRarity itemRarity, int slots) : base(name, itemRarity, slots)
+        {
 
-        public PotionType Type
-        {
-            get { return this.type; }
-            set { this.type = value; }
-        }
-        
-        public Potion()
-        {
-            this.Rarity = potionsRarity;
-            this.SlotsInInventory = 1;
-            this.Slot = potionSlot;
         }
     }
 }

@@ -50,10 +50,12 @@
     <Compile Include="Account\Player.cs" />
     <Compile Include="Engine\Game.cs" />
     <Compile Include="Engine\Graphics\GraphicalEngine.cs" />
+    <Compile Include="Engine\Scripts\Characters\Items\Armor.cs" />
+    <Compile Include="Engine\Scripts\Characters\Items\ChestArmor.cs" />
     <Compile Include="Engine\Scripts\Characters\Items\Item.cs" />
-    <Compile Include="Engine\Scripts\Characters\Items\OneHanded.cs" />
+    <Compile Include="Engine\Scripts\Characters\Items\ItemFactory.cs" />
+    <Compile Include="Engine\Scripts\Characters\Items\Gun.cs" />
     <Compile Include="Engine\Scripts\Characters\Items\Potion.cs" />
-    <Compile Include="Engine\Scripts\Characters\Items\PotionHealth.cs" />
     <Compile Include="Engine\Scripts\Characters\NonPlayable\AnimalDog.cs" />
     <Compile Include="Engine\Scripts\Characters\NonPlayable\NaziOfficer.cs" />
     <Compile Include="Engine\Scripts\Characters\NonPlayable\SS.cs" />
@@ -73,9 +75,8 @@
     <Compile Include="Engine\Scripts\Characters\Shared\IHero.cs" />
     <Compile Include="Engine\Scripts\Characters\Shared\IMovable.cs" />
     <Compile Include="Engine\Scripts\Characters\Shared\INpcEnemy.cs" />
-    <Compile Include="Engine\Scripts\Characters\Shared\INpcQuest.cs" />
-    <Compile Include="Engine\Scripts\Characters\Shared\INpcVendor.cs" />
     <Compile Include="Engine\Scripts\Characters\Shared\IPlayable.cs" />
+    <Compile Include="Engine\Scripts\Characters\Shared\RandomGenerator.cs" />
     <Compile Include="Engine\Scripts\Characters\Shared\Skill.cs" />
     <Compile Include="Engine\Scripts\Environment\Room.cs" />
     <Compile Include="Engine\Scripts\Environment\RoomFactory.cs" />
@@ -99,6 +100,7 @@
       <DependentUpon>SelectHero.cs</DependentUpon>
     </Compile>
     <Compile Include="Entry.cs" />
+    <Compile Include="GameSystem\Input.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="GameSystem\ExceptionSample.cs" />
     <Compile Include="GameSystem\LoggerEngine.cs" />
@@ -142,7 +144,7 @@
     <None Include="Data\Graphics\Tile16x16Wall.png" />
     <Content Include="Data\Sounds\TextFile1.txt" />
     <Content Include="Data\TextFile1.txt" />
-    <Content Include="Engine\Graphics\Room1.txt">
+    <Content Include="Data\Graphics\Room1.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Engine\Views\TextFile1.txt" />

@@ -1,18 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace RPG.Engine.Scripts.Environment
+﻿namespace RPG.Engine.Scripts.Environment
 {
+    /// <summary>
+    /// A Room factory class to create a random room
+    /// </summary>
     public static class RoomFactory
     {
-        private const string file1 = @"Engine\Graphics\Room1.txt";
+        /// <summary>
+        /// string array with text files 
+        /// </summary>
+        private static readonly string[] Rooms = { "Data/Graphics/Room1.txt", "Data/Graphics/Room2.txt", "Data/Graphics/Room3.txt" };
+
+        /// <summary>
+        /// Creates a random room
+        /// </summary>
+        /// <returns></returns>
         public static Room Create()
         {
-            Room room = new Room();
-            room.GenerateRoom(file1);
+            // TODO Add random generator
+            var room = new Room();
+            room.GenerateRoom(Rooms[0]);
             return room;
         }
     }

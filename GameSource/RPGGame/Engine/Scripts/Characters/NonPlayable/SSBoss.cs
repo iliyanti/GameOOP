@@ -2,5 +2,8 @@
 {
     public class SSBoss : SS
     {
+        public SSBoss(int homeRow, int homeColumn) : base(homeRow, homeColumn)
+        {
+        }
     }
 }
