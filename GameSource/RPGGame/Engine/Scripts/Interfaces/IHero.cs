@@ -6,6 +6,6 @@
 
         int NextLevelExperience { get; set; }
 
-        void GetUsetInput();
+  
     }
 }

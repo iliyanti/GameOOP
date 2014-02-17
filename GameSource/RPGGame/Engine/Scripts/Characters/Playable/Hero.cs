@@ -98,12 +98,6 @@ namespace RPG.Engine.Scripts.Characters.Playable
             }
         }
 
-        /// <summary>
-        /// Gets the user input an saves it to a path
-        /// </summary>
-        public void GetUsetInput()
-        {
-            throw new System.NotImplementedException();
-        }
+   
     }
 }
