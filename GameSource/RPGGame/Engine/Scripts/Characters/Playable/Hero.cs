@@ -105,14 +105,5 @@ namespace RPG.Engine.Scripts.Characters.Playable
         {
             throw new System.NotImplementedException();
         }
-
-        /// <summary>
-        /// Method to add an item to the inventory
-        /// </summary>
-        /// <param name="item">input an item</param>
-        public void AddItem(Item item)
-        {
-            this.Inventory.Add(item);
-        }
     }
 }
