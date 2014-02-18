@@ -86,11 +86,6 @@
         /// </summary>
         public abstract void Move();
 
-        /// <summary>
-        /// Checks if the character is dead.
-        /// </summary>
-        public abstract void CheckHealth();
-
         public void AddToPath(Direction direction)
         {
             this.Path.Push(direction);
@@ -100,5 +95,19 @@
         {
             this.Path.Pop();
         }
+
+        /// <summary>
+        /// Checks the health of the character
+        /// </summary>
+        public  bool IsDead()
+        {
+            if (this.Health <= 0)
+            {
+                return true;
+            }
+
+            return false;
+        }
+
     }
 }

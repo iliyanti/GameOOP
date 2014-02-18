@@ -41,10 +41,6 @@
             {
                 var data = new Queue<Coordinate>();
                 data.Enqueue(new Coordinate(this.LocationRow, this.LocationColumn, 0));
-
-               
-
-               
             }
         }
 
@@ -75,11 +71,6 @@
             }
         }
 
-        public override void CheckHealth()
-        {
-            // TODO Show loot
-        }
-
-
+       
     }
 }

@@ -1,11 +1,11 @@
-﻿using System.Collections.Generic;
-using RPG.Engine.Scripts.Characters.Items;
-using RPG.Engine.Scripts.Characters.Quests;
-using RPG.Engine.Scripts.Characters.Shared;
-using RPG.Engine.Scripts.Interfaces;
-
-namespace RPG.Engine.Scripts.Characters.Playable
+﻿namespace RPG.Engine.Scripts.Characters.Playable
 {
+    using Interfaces;
+    using Items;
+    using Quests;
+    using Shared;
+    using System.Collections.Generic;
+
     /// <summary>
     /// A class for the hero
     /// </summary>
@@ -85,19 +85,13 @@ namespace RPG.Engine.Scripts.Characters.Playable
             }
         }
 
+        
 
-        /// <summary>
-        /// Checks the health of the hero
-        /// </summary>
-        public override void CheckHealth()
+        public void Revive()
         {
-            if (this.Health <= 0)
-            {
-                this.LocationColumn = this.HomeColumn;
-                this.LocationRow = this.HomeRow;
-            }
+            this.LocationColumn = this.HomeColumn;
+            this.LocationRow = this.HomeRow;
+            this.Health = this.TotalHealth;
         }
-
-   
     }
 }
